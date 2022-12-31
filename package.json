@@ -10,13 +10,14 @@
     "preview": "astro preview",
     "astro": "astro",
     "commitlint": "commitlint",
-    "prepare": "astro telemetry disable"
+    "prepare": "astro telemetry disable && husky install"
   },
   "dependencies": {
     "astro": "^1.8.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.3.0",
-    "@commitlint/config-conventional": "^17.3.0"
+    "@commitlint/config-conventional": "^17.3.0",
+    "husky": "^8.0.2"
   }
 }
