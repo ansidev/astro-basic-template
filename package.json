@@ -9,9 +9,14 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
+    "commitlint": "commitlint",
     "prepare": "astro telemetry disable"
   },
   "dependencies": {
     "astro": "^1.8.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^17.3.0",
+    "@commitlint/config-conventional": "^17.3.0"
   }
 }
