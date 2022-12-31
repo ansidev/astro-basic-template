@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+if [ -t 0 ];
+then
+  # running via terminal
+  exec < /dev/tty && [ -z "$(cat ${1})" ] && pnpm exec cz --hook || true
+else
+  # running via GUI
+  [ -z "$(cat ${1})" ] && pnpm exec cz --hook || true
+fi
