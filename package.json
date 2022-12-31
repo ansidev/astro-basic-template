@@ -9,9 +9,12 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "prepare": "astro telemetry disable"
+    "prepare": "astro telemetry disable && husky install"
   },
   "dependencies": {
     "astro": "^1.8.0"
+  },
+  "devDependencies": {
+    "husky": "^8.0.2"
   }
 }
