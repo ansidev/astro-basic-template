@@ -1,0 +1,11 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "eslint.enable": true,
+  "eslint.packageManager": "pnpm",
+  "eslint.run": "onSave",
+  "javascript.format.semicolons": "remove",
+  "typescript.format.semicolons": "remove",
+  "typescriptHero.imports.insertSemicolons": false,
+  "typescript.preferences.quoteStyle": "single",
+  "javascript.preferences.quoteStyle": "single",
+}
