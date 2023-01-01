@@ -10,7 +10,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "prepare": "astro telemetry disable && husky install",
-    "type-check": "astro check && tsc --noEmit"
+    "type-check": "astro check && tsc --noEmit",
+    "lint": "eslint --ext .ts,.astro --ignore-path .gitignore src"
   },
   "dependencies": {
     "astro": "^1.8.0"
