@@ -1,0 +1,63 @@
+name: deploy
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+      - feature/*
+
+  pull_request:
+    branches:
+      - main
+      - develop
+
+env:
+  NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+  NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+  DEPLOY_DIR: dist
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup PNPM
+        uses: pnpm/action-setup@v2.2.4
+        with:
+          version: "7.x"
+          run_install: false
+
+      - name: Get PNPM store directory
+        id: pnpm-cache
+        run: |
+          echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
+
+      - name: Setup pnpm cache
+        uses: actions/cache@v3
+        with:
+          path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
+          key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
+          restore-keys: |
+            ${{ runner.os }}-pnpm-store-
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Build site
+        env:
+          ASTRO_BASE_URL: ${{ secrets.ASTRO_BASE_URL }}
+        run: pnpm run build
+
+      - name: Install Netlify CLI
+        run: pnpm add -g netlify-cli
+
+      - name: Deploy preview
+        if: github.ref != 'refs/heads/main'
+        run: netlify deploy -a ${{ env.NETLIFY_AUTH_TOKEN }} -s ${{ env.NETLIFY_SITE_ID }} -d ${{ env.DEPLOY_DIR }} -m "$(git log -1 --pretty=%B)"
+
+      - name: Deploy production
+        if: github.ref == 'refs/heads/main'
+        run: netlify deploy -a ${{ env.NETLIFY_AUTH_TOKEN }} -s ${{ env.NETLIFY_SITE_ID }} -d ${{ env.DEPLOY_DIR }} -m "$(git log -1 --pretty=%B)" -p
