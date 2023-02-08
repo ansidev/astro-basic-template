@@ -14,7 +14,7 @@
     "lint": "eslint --ext .ts,.astro --ignore-path .gitignore src"
   },
   "dependencies": {
-    "astro": "^2.0.0"
+    "astro": "^2.0.8"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
