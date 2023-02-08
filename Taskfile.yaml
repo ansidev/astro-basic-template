@@ -1,0 +1,103 @@
+version: '3'
+
+tasks:
+  install:
+    desc: Install dependencies
+    cmds:
+      - pnpm install
+
+  clean:
+    desc: Clean
+    cmds:
+      - rm -r dist
+    ignore_error: true
+
+  prebuild:
+    desc: Prebuild
+    cmds:
+      - task: clean
+    ignore_error: true
+
+  build:
+    desc: Build
+    cmds:
+      - task: install
+      - task: prebuild
+      - pnpm run build
+
+  update_dep:
+    desc: Check whether the new version of the npm package broke the build.
+    cmds:
+      - task: init_dep_branch
+        vars:
+          BRANCH_NAME: '{{.CLI_ARGS}}'
+      - ncu -u -f {{.CLI_ARGS}}
+      - task: build
+      - task: commit_dep_changes
+        vars:
+          PACKAGE_NAME: '{{.CLI_ARGS}}'
+    silent: true
+
+  update_deps:
+    desc: Check whether the new version of the npm packages broke the build.
+    cmds:
+      - task: init_dep_branch
+        vars:
+          BRANCH_NAME: 'upgrade'
+      - ncu -u -f {{.CLI_ARGS}}
+      - task: build
+      - task: commit_dep_changes
+        vars:
+          PACKAGE_NAME: '{{.CLI_ARGS}}'
+    silent: true
+
+  init_dep_branch:
+    desc: Init git branch deps/*
+    cmds:
+      - git pull origin main:main
+      - git switch deps/{{.BRANCH_NAME}} 2>/dev/null || git switch -c deps/{{.BRANCH_NAME}}
+      - git rebase origin/main
+    silent: true
+
+  commit_dep_changes:
+    desc: Commit changes after updating package version
+    vars:
+      PACKAGE_VERSION:
+        sh: npm view {{.PACKAGE_NAME}} version
+    cmds:
+      - git add package.json pnpm-lock.yaml src/auto-imports.d.ts
+      - |
+        git commit -m "build(deps): update {{.PACKAGE_NAME}} to version {{.PACKAGE_VERSION}}"
+      - task: push_current
+      - task: create_pr_current
+    silent: true
+
+  push_current:
+    desc: Push current branch
+    vars:
+      BRANCH_NAME:
+        sh: git branch --show
+    cmds:
+      - git push -u origin {{.BRANCH_NAME}}
+    silent: true
+
+  create_pr_current:
+    desc: Create GitHub pull request for the current git branch
+    vars:
+      BRANCH_NAME:
+        sh: git branch --show
+    cmds:
+      - task: create_pr
+        vars:
+          BASE: 'main'
+          HEAD: '{{.BRANCH_NAME}}'
+    silent: true
+
+  create_pr:
+    desc: Create GitHub pull request
+    vars:
+      PR_TITLE:
+        sh: git log {{.BASE}}..{{.HEAD}} --pretty=format:%s | tail -1
+    cmds:
+      - gh pr create --base "{{.BASE}}" --head "{{.HEAD}}" --title "{{.PR_TITLE}}" --fill
+    silent: true
