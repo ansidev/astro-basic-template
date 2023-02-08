@@ -1,4 +1,4 @@
-version: '3'
+version: "3"
 
 tasks:
   install:
@@ -30,12 +30,12 @@ tasks:
     cmds:
       - task: init_dep_branch
         vars:
-          BRANCH_NAME: '{{.CLI_ARGS}}'
+          BRANCH_NAME: "{{.CLI_ARGS}}"
       - ncu -u -f {{.CLI_ARGS}}
       - task: build
       - task: commit_dep_changes
         vars:
-          PACKAGE_NAME: '{{.CLI_ARGS}}'
+          PACKAGE_NAME: "{{.CLI_ARGS}}"
     silent: true
 
   update_deps:
@@ -43,12 +43,12 @@ tasks:
     cmds:
       - task: init_dep_branch
         vars:
-          BRANCH_NAME: 'upgrade'
+          BRANCH_NAME: "upgrade"
       - ncu -u -f {{.CLI_ARGS}}
       - task: build
       - task: commit_dep_changes
         vars:
-          PACKAGE_NAME: '{{.CLI_ARGS}}'
+          PACKAGE_NAME: "{{.CLI_ARGS}}"
     silent: true
 
   init_dep_branch:
@@ -65,9 +65,15 @@ tasks:
       PACKAGE_VERSION:
         sh: npm view {{.PACKAGE_NAME}} version
     cmds:
-      - git add package.json pnpm-lock.yaml src/auto-imports.d.ts
+      - git add package.json pnpm-lock.yaml
       - |
         git commit -m "build(deps): update {{.PACKAGE_NAME}} to version {{.PACKAGE_VERSION}}"
+      - task: pr
+    silent: true
+
+  pr:
+    desc: Push commits and create GitHub PR
+    cmds:
       - task: push_current
       - task: create_pr_current
     silent: true
@@ -89,8 +95,8 @@ tasks:
     cmds:
       - task: create_pr
         vars:
-          BASE: 'main'
-          HEAD: '{{.BRANCH_NAME}}'
+          BASE: "main"
+          HEAD: "{{.BRANCH_NAME}}"
     silent: true
 
   create_pr:
