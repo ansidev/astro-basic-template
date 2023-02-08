@@ -6,7 +6,7 @@ specifiers:
   '@types/node': ^18.13.0
   '@typescript-eslint/eslint-plugin': ^5.51.0
   '@typescript-eslint/parser': ^5.51.0
-  astro: ^2.0.8
+  astro: ^2.0.9
   commitizen: ^4.3.0
   cz-conventional-changelog: ^3.3.0
   eslint: ^8.33.0
@@ -16,7 +16,7 @@ specifiers:
   typescript: ^4.9.5
 
 dependencies:
-  astro: 2.0.8_@types+node@18.13.0
+  astro: 2.0.9_@types+node@18.13.0
 
 devDependencies:
   '@commitlint/cli': 17.4.2
@@ -72,13 +72,13 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark/2.0.1_astro@2.0.8:
+  /@astrojs/markdown-remark/2.0.1_astro@2.0.9:
     resolution: {integrity: sha512-xQF1rXGJN18m+zZucwRRtmNehuhPMMhZhi6HWKrtpEAKnHSPk8lqf1GXgKH7/Sypglu8ivdECZ+EGs6kOYVasQ==}
     peerDependencies:
       astro: ^2.0.2
     dependencies:
       '@astrojs/prism': 2.0.0
-      astro: 2.0.8_@types+node@18.13.0
+      astro: 2.0.9_@types+node@18.13.0
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.0
       rehype-raw: 6.1.1
@@ -1244,14 +1244,14 @@ packages:
       - supports-color
     dev: true
 
-  /astro/2.0.8_@types+node@18.13.0:
-    resolution: {integrity: sha512-Rbp/6MfxzSVp8qJXjWWja555ZxdqS7Nk/IYg90VKvLNbDsnnBobZZ6vJp21T2e/my4sqJ6PZIOPVnxXr7OeQLQ==}
+  /astro/2.0.9_@types+node@18.13.0:
+    resolution: {integrity: sha512-awZEZ61kiMNJMda+dUunz87DSWV0eV72P4ulpEsNpA6im2WysZ3svm+wlOP2XfLwsA/MDpOyAYWFxvh2PZK5ug==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
       '@astrojs/compiler': 1.1.0
       '@astrojs/language-server': 0.28.3
-      '@astrojs/markdown-remark': 2.0.1_astro@2.0.8
+      '@astrojs/markdown-remark': 2.0.1_astro@2.0.9
       '@astrojs/telemetry': 2.0.0
       '@astrojs/webapi': 2.0.0
       '@babel/core': 7.20.7
