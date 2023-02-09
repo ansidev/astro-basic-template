@@ -18,7 +18,8 @@
     "release:pre": "standard-version --prerelease rc"
   },
   "dependencies": {
-    "astro": "^2.0.9"
+    "astro": "^2.0.9",
+    "astro-compress": "^1.1.31"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.2",
