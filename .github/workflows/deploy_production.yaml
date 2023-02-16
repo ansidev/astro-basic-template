@@ -1,4 +1,4 @@
-name: deploy-production
+name: deploy_production
 
 on:
   pull_request:
@@ -13,7 +13,7 @@ env:
   DEPLOY_DIR: dist
 
 jobs:
-  deploy-production:
+  deploy_production:
     environment:
       name: production
       url: ${{ steps.post_deploy.outputs.netlify_prod_url }}
@@ -35,13 +35,13 @@ jobs:
           run_install: false
 
       - name: Get PNPM store directory
-        id: pnpm-cache
+        id: pnpm_cache
         run: echo "pnpm_store_path=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - name: Setup pnpm cache
         uses: actions/cache@v3
         with:
-          path: ${{ steps.pnpm-cache.outputs.pnpm_store_path }}
+          path: ${{ steps.pnpm_cache.outputs.pnpm_store_path }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
