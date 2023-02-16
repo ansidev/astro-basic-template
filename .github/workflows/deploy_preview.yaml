@@ -14,7 +14,7 @@ env:
 jobs:
   deploy-preview:
     environment:
-      name: ${{ env.DEPLOY_ENV }}
+      name: ${{ steps.post_deploy.outputs.github_environment }}
       url: ${{ steps.post_deploy.outputs.netlify_draft_url }}
     runs-on: ubuntu-latest
     steps:
@@ -95,3 +95,5 @@ jobs:
           echo "netlify_logs_url=$NETLIFY_LOGS_URL" >> $GITHUB_OUTPUT
           echo "netlify_draft_url=$NETLIFY_DRAFT_URL" >> $GITHUB_OUTPUT
           echo "netlify_prod_url=$NETLIFY_PROD_URL" >> $GITHUB_OUTPUT
+
+          echo "github_environment=$DEPLOY_ENV" >> $GITHUB_OUTPUT
