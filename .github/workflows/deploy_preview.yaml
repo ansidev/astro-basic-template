@@ -1,8 +1,9 @@
-name: deploy-preview
+name: deploy_preview
 
 on:
   pull_request:
     branches:
+      - main
       - develop
 
 env:
@@ -11,9 +12,30 @@ env:
   DEPLOY_DIR: dist
 
 jobs:
-  deploy-preview:
+  set_deploy_environment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set deploy environment for ${{ github.base_ref }} branch
+        if: github.base_ref == 'main'
+        run: |
+          echo "DEPLOY_ENVIRONMENT=staging" >> $GITHUB_ENV
+
+      - name: Set deploy environment for ${{ github.base_ref }} branch
+        if: github.base_ref == 'develop'
+        run: |
+          echo "DEPLOY_ENVIRONMENT=preview" >> $GITHUB_ENV
+
+      - name: Set deploy environment output
+        id: deploy_environment
+        run: |
+          echo "github_environment=$DEPLOY_ENVIRONMENT" >> $GITHUB_OUTPUT
+    outputs:
+      github_environment: ${{ steps.deploy_environment.outputs.github_environment }}
+
+  deploy_preview:
+    needs: set_deploy_environment
     environment:
-      name: preview
+      name: ${{ needs.set_deploy_environment.outputs.github_environment }}
       url: ${{ steps.post_deploy.outputs.netlify_draft_url }}
     runs-on: ubuntu-latest
     steps:
