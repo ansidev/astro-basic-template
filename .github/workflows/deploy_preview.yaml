@@ -3,6 +3,7 @@ name: deploy-preview
 on:
   pull_request:
     branches:
+      - main
       - develop
 
 env:
@@ -13,7 +14,7 @@ env:
 jobs:
   deploy-preview:
     environment:
-      name: preview
+      name: ${{ env.DEPLOY_ENV }}
       url: ${{ steps.post_deploy.outputs.netlify_draft_url }}
     runs-on: ubuntu-latest
     steps:
@@ -48,6 +49,16 @@ jobs:
 
       - name: Install Netlify CLI
         run: pnpm add --save-dev netlify-cli
+
+      - name: Set deploy environment for ${{ github.base_ref }} branch
+        if: github.base_ref == 'main'
+        run: |
+          echo "DEPLOY_ENV=staging" >> $GITHUB_ENV
+
+      - name: Set deploy environment for ${{ github.base_ref }} branch
+        if: github.base_ref == 'develop'
+        run: |
+          echo "DEPLOY_ENV=preview" >> $GITHUB_ENV
 
       - name: Deploy preview
         id: deploy
