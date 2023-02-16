@@ -12,9 +12,30 @@ env:
   DEPLOY_DIR: dist
 
 jobs:
-  deploy-preview:
+  set_deploy_environment:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set deploy environment for ${{ github.base_ref }} branch
+        if: github.base_ref == 'main'
+        run: |
+          echo "DEPLOY_ENVIRONMENT=staging" >> $GITHUB_ENV
+
+      - name: Set deploy environment for ${{ github.base_ref }} branch
+        if: github.base_ref == 'develop'
+        run: |
+          echo "DEPLOY_ENVIRONMENT=preview" >> $GITHUB_ENV
+
+      - name: Set deploy environment output
+        id: deploy_environment
+        run: |
+          echo "github_environment=$DEPLOY_ENVIRONMENT" >> $GITHUB_OUTPUT
+    outputs:
+      github_environment: ${{ steps.deploy_environment.outputs.github_environment }}
+
+  deploy_preview:
+    needs: set_deploy_environment
     environment:
-      name: ${{ steps.post_deploy.outputs.github_environment }}
+      name: ${{ needs.set_deploy_environment.outputs.github_environment }}
       url: ${{ steps.post_deploy.outputs.netlify_draft_url }}
     runs-on: ubuntu-latest
     steps:
@@ -49,16 +70,6 @@ jobs:
 
       - name: Install Netlify CLI
         run: pnpm add --save-dev netlify-cli
-
-      - name: Set deploy environment for ${{ github.base_ref }} branch
-        if: github.base_ref == 'main'
-        run: |
-          echo "DEPLOY_ENV=staging" >> $GITHUB_ENV
-
-      - name: Set deploy environment for ${{ github.base_ref }} branch
-        if: github.base_ref == 'develop'
-        run: |
-          echo "DEPLOY_ENV=preview" >> $GITHUB_ENV
 
       - name: Deploy preview
         id: deploy
@@ -95,5 +106,3 @@ jobs:
           echo "netlify_logs_url=$NETLIFY_LOGS_URL" >> $GITHUB_OUTPUT
           echo "netlify_draft_url=$NETLIFY_DRAFT_URL" >> $GITHUB_OUTPUT
           echo "netlify_prod_url=$NETLIFY_PROD_URL" >> $GITHUB_OUTPUT
-
-          echo "github_environment=$DEPLOY_ENV" >> $GITHUB_OUTPUT
