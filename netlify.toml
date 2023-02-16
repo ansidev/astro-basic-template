@@ -3,6 +3,5 @@
   NODE_VERSION = "18"
 
 [build]
-  command = "pnpm run build"
-  functions = "netlify/functions"
+  command = "ASTRO_BASE_URL=https://${DEPLOY_PREFIX}${SITE_NAME}.netlify.app pnpm run build"
   publish = "dist"
