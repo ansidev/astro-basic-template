@@ -19,7 +19,7 @@
     "release:pre": "standard-version --prerelease rc"
   },
   "dependencies": {
-    "astro": "^2.0.9",
+    "astro": "^2.0.14",
     "astro-compress": "^1.1.33",
     "astro-purgecss": "^2.0.0"
   },
