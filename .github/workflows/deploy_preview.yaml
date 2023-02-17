@@ -15,12 +15,12 @@ jobs:
   set_deploy_environment:
     runs-on: ubuntu-latest
     steps:
-      - name: Set deploy environment for ${{ github.base_ref }} branch
+      - name: Set deploy environment for main branch
         if: github.base_ref == 'main'
         run: |
           echo "DEPLOY_ENVIRONMENT=staging" >> $GITHUB_ENV
 
-      - name: Set deploy environment for ${{ github.base_ref }} branch
+      - name: Set deploy environment for develop branch
         if: github.base_ref == 'develop'
         run: |
           echo "DEPLOY_ENVIRONMENT=preview" >> $GITHUB_ENV
@@ -90,6 +90,7 @@ jobs:
             --message "$(git log -1 --pretty=%B)" \
             | tr '\n' ' ')
           set +e
+
 
           NETLIFY_OUTPUT=$(echo "$OUTPUT")
 
