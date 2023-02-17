@@ -133,11 +133,13 @@ jobs:
 
   delete_resources:
     needs: deploy
-    if: needs.deploy.outputs.success == true &&
+    if: needs.deploy.outputs.success == 'true' &&
       github.base_ref == 'develop' &&
       github.event.action == 'closed' &&
       github.event.pull_request.merged == true
     runs-on: ubuntu-latest
+    env:
+      GH_TOKEN: ${{ github.token }}
     steps:
       - name: Delete the PR branch after merged into develop
         run: |
