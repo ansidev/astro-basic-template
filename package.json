@@ -12,7 +12,7 @@
     "astro": "astro",
     "prepare": "astro telemetry disable && husky install",
     "type-check": "astro check && tsc --noEmit",
-    "lint": "eslint --ext .ts,.astro --ignore-path .gitignore src",
+    "lint": "eslint --ext .cjs,.mjs,.ts,.astro --ignore-path .gitignore .",
     "release:major": "standard-version --release-as major",
     "release:minor": "standard-version --release-as minor",
     "release:patch": "standard-version --release-as patch",

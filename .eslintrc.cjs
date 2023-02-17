@@ -2,6 +2,10 @@ const { quotes, semicolon } = require('./eslint.config.cjs')
 
 module.exports = {
   plugins: ['simple-import-sort'],
+  env: {
+    browser: true,
+    node: true
+  },
   parserOptions: {
     sourceType: 'module',
     ecmaVersion: 2020
