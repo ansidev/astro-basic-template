@@ -47,6 +47,6 @@ tasks:
       - git add {{.COMMIT_FILES}}
       - |
         git commit -m "build(deps): update {{.PACKAGE_NAME}} to version {{.PACKAGE_VERSION}}"
-      - task: "git:push-current"
+      - task: "git:push_current"
       - task: "github:create_pr_current"
     silent: true
