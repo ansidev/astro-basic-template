@@ -1,11 +1,14 @@
-name: deploy_production
+name: deploy_preview
 
 on:
   pull_request:
-    types:
-      - closed
     branches:
       - main
+      - develop
+    types:
+      - opened
+      - synchronize
+      - closed
 
 env:
   NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
@@ -13,12 +16,43 @@ env:
   DEPLOY_DIR: dist
 
 jobs:
-  deploy_production:
-    environment:
-      name: production
-      url: ${{ steps.post_deploy.outputs.netlify_prod_url }}
+  set_deploy_environment:
+    if: github.event.action != 'closed' || github.event.pull_request.merged != true
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    steps:
+      - name: Set deploy environment as pr-${{ github.event.number }}-preview
+        if: github.base_ref == 'develop' && contains(fromJSON('["opened", "synchronize"]'), github.event.action)
+        env:
+          DEPLOY_ENVIRONMENT: pr-${{ github.event.number }}-preview
+        run: echo "DEPLOY_ENVIRONMENT=$DEPLOY_ENVIRONMENT" >> $GITHUB_ENV
+
+      - name: Set deploy environment as preview
+        if: github.base_ref == 'develop' && github.event.action == 'closed' && github.event.pull_request.merged != false
+        run: echo "DEPLOY_ENVIRONMENT=preview" >> $GITHUB_ENV
+
+      - name: Set deploy environment as staging
+        if: github.base_ref == 'main' && contains(fromJSON('["opened", "synchronize"]'), github.event.action)
+        run: echo "DEPLOY_ENVIRONMENT=staging" >> $GITHUB_ENV
+
+      - name: Set deploy environment as production
+        if: github.base_ref == 'main' && github.event.action == 'closed' && github.event.pull_request.merged == true
+        run: echo "DEPLOY_ENVIRONMENT=production" >> $GITHUB_ENV
+
+      - name: Set deploy environment output
+        id: deploy_environment
+        run: |
+          echo "github_environment=$DEPLOY_ENVIRONMENT" >> $GITHUB_OUTPUT
+
+    outputs:
+      github_environment: ${{ steps.deploy_environment.outputs.github_environment }}
+
+  deploy:
+    if: github.event.action != 'closed' || github.event.pull_request.merged == false
+    needs: set_deploy_environment
+    environment:
+      name: ${{ needs.set_deploy_environment.outputs.github_environment }}
+      url: ${{ steps.post_deploy.outputs.netlify_draft_url }}
+    runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
@@ -35,13 +69,13 @@ jobs:
           run_install: false
 
       - name: Get PNPM store directory
-        id: pnpm_cache
+        id: pnpm-cache
         run: echo "pnpm_store_path=$(pnpm store path)" >> $GITHUB_OUTPUT
 
       - name: Setup pnpm cache
         uses: actions/cache@v3
         with:
-          path: ${{ steps.pnpm_cache.outputs.pnpm_store_path }}
+          path: ${{ steps.pnpm-cache.outputs.pnpm_store_path }}
           key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
           restore-keys: |
             ${{ runner.os }}-pnpm-store-
@@ -52,7 +86,11 @@ jobs:
       - name: Install Netlify CLI
         run: pnpm add --save-dev netlify-cli
 
-      - name: Deploy production
+      - name: Set as Netlify production deployment
+        if: needs.set_deploy_environment.outputs.github_environment == 'production'
+        run: echo "PROD=true" >> $GITHUB_ENV
+
+      - name: Deploy preview
         id: deploy
         if: success()
         env:
@@ -68,8 +106,8 @@ jobs:
             --build \
             --context deploy-preview \
             --alias ${DEPLOY_ALIAS} \
-            --message "$(git log -1 --pretty=%B)" \
-            --prod \
+            --message "$(git log -1 --pretty=%s)" \
+            --prod ${PROD:-false} \
             | tr '\n' ' ')
           set +e
 
