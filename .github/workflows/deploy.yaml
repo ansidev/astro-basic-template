@@ -17,7 +17,7 @@ env:
 
 jobs:
   set_deploy_environment:
-    if: github.event.action != 'closed' || github.event.pull_request.merged != true
+    if: github.event.action != 'closed' || github.event.pull_request.merged == true
     runs-on: ubuntu-latest
     steps:
       - name: Set deploy environment as pr-${{ github.event.number }}-preview
@@ -27,7 +27,7 @@ jobs:
         run: echo "DEPLOY_ENVIRONMENT=$DEPLOY_ENVIRONMENT" >> $GITHUB_ENV
 
       - name: Set deploy environment as preview
-        if: github.base_ref == 'develop' && github.event.action == 'closed' && github.event.pull_request.merged != false
+        if: github.base_ref == 'develop' && github.event.action == 'closed' && github.event.pull_request.merged == true
         run: echo "DEPLOY_ENVIRONMENT=preview" >> $GITHUB_ENV
 
       - name: Set deploy environment as staging
@@ -47,7 +47,7 @@ jobs:
       github_environment: ${{ steps.deploy_environment.outputs.github_environment }}
 
   deploy:
-    if: github.event.action != 'closed' || github.event.pull_request.merged == false
+    if: github.event.action != 'closed' || github.event.pull_request.merged == true
     needs: set_deploy_environment
     environment:
       name: ${{ needs.set_deploy_environment.outputs.github_environment }}
