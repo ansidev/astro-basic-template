@@ -114,6 +114,7 @@ jobs:
           NETLIFY_OUTPUT=$(echo "$OUTPUT")
 
           echo "netlify_output=$NETLIFY_OUTPUT" >> $GITHUB_OUTPUT
+          echo "success=true" >> $GITHUB_OUTPUT
 
       - name: Post deploy
         id: post_deploy
@@ -127,12 +128,27 @@ jobs:
           echo "netlify_draft_url=$NETLIFY_DRAFT_URL" >> $GITHUB_OUTPUT
           echo "netlify_prod_url=$NETLIFY_PROD_URL" >> $GITHUB_OUTPUT
 
-      - name: Delete branch after merged into develop
-        if: success() &&
-          github.base_ref == 'develop' &&
-          github.event.action == 'closed' &&
-          github.event.pull_request.merged == true
+    outputs:
+      success: ${{ steps.deploy.outputs.success }}
+
+  delete_resources:
+    needs: deploy
+    if: needs.deploy.outputs.success == true &&
+      github.base_ref == 'develop' &&
+      github.event.action == 'closed' &&
+      github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete the PR branch after merged into develop
         run: |
-          curl -s -X DELETE \
-            -u username:${{secrets.GITHUB_TOKEN}} \
-            https://api.github.com/repos/${{ github.repository }}/git/refs/heads/${{ github.head_ref }}
+          gh api \
+            --method DELETE \
+            -H "Accept: application/vnd.github+json" \
+            /repos/${{ github.repository }}/git/refs/heads/${{ github.head_ref }}
+
+      - name: Delete the environment pr-${{ github.event.number }}-preview
+        run: |
+          gh api \
+            --method DELETE \
+            -H "Accept: application/vnd.github+json" \
+            /repos/${{ github.repository }}/environments/pr-${{ github.event.number }}-preview
