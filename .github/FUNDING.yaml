@@ -11,8 +11,6 @@ ko_fi: ansidev
 # otechie: # Replace with a single Otechie username
 # lfx_crowdfunding: # Replace with a single LFX Crowdfunding project-name e.g., cloud-foundry
 custom:
-  [
-    "https://www.paypal.me/ansidev",
-    "https://www.buymeacoffee.com/ansidev",
-    "https://me.momo.vn/ansidev",
-  ]
+  - "https://www.paypal.me/ansidev"
+  - "https://www.buymeacoffee.com/ansidev"
+  - "https://me.momo.vn/ansidev"
