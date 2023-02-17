@@ -12,7 +12,7 @@ This is a starter template for the new [Astro](https://astro.build) project whic
 - Automate releasing new versions using [GitHub Actions](https://github.com/features/actions) and following the [`git-flow`](https://nvie.com/posts/a-successful-git-branching-model/) branching model.
 - Automate [Netlify](https://netlify.com/) deployment, support GitHub deploy environment. [Go to section](#github-deploy-environment).
 
-## Development features
+**Development features**
 
 - Node package manager: [PNPM](https://pnpm.io/).
 - [Conventional commit](https://conventionalcommits.org/).
@@ -21,6 +21,42 @@ This is a starter template for the new [Astro](https://astro.build) project whic
 - [Renovate](https://www.mend.io/free-developer-tools/renovate/) - Automate dependency updates.
 - [changie](https://changie.dev), [git-chglog](https://github.com/git-chglog/git-chglog) - Generate changelog from conventional commits.
 - [taskfile](https://github.com/ansidev/taskfile) - Task files for common tasks.
+
+## Manual
+
+### Getting started
+
+#### Install
+
+Run one of these commands to init a new project from this template
+
+```sh
+npm create astro@latest -- --template ansidev/astro-basic-template
+```
+
+```sh
+yarn create astro@latest --template ansidev/astro-basic-template
+```
+
+```sh
+pnpm create astro@latest --template ansidev/astro-basic-template
+```
+
+#### Setup GitHub repository
+
+1. Create new GitHub Repository. Click [here](https://github.com/new/).
+2. Create new Netlify site.
+   - Recommended method: Deploy manually.
+   - Disable `Branch deploy` and `Deploy Preview` feature since the site will be deployed using Netlify CLI.
+     - https://docs.netlify.com/site-deploys/overview/#branch-deploy-controls
+     - https://docs.netlify.com/site-deploys/overview/#deploy-preview-controls
+3. Go to https://github.com/{user}/{repository}/settings/secrets/actions/new and add following repository secrets:
+
+   | Name                 | Description                                                                                                                                                                            |
+   | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | `GH_TOKEN`           | GitHub Personal Access Token which has the `repo` scope. Click [here](https://github.com/settings/tokens/new?scopes=repo) to create a new one.                                         |
+   | `NETLIFY_AUTH_TOKEN` | Netlify Authentication Token. Click [here](https://app.netlify.com/user/applications/personal) to create a new one.                                                                    |
+   | `NETLIFY_SITE_ID`    | Netlify site ID. You can obtain it via UI or CLI.<br/><ul><li>UI: Go to https://app.netlify.com/sites/{netlify-site-name}/settings/general#site-details and click the copy button next to the site ID.</li><li>CLI: Run `netlify sites:list` and copy the site ID.</li></ul> |
 
 ## Project Structure
 
@@ -120,16 +156,16 @@ All commands are run from the root of the project, from a terminal:
 
 ## GitHub Deploy Environment
 
-| Branch    | Event          | Event Type    | Is Merged | GitHub Environment     | Note                                         |
-| --------- | -------------- | ------------- | --------- | ---------------------- | -------------------------------------------- |
-| `main`    | `pull_request` | `closed`      | `true`    | `production`           |                                              |
-| `main`    | `pull_request` | `open`        | `false`   | `staging`              |                                              |
-| `main`    | `pull_request` | `synchronize` | `false`   | `staging`              |                                              |
-| `develop` | `pull_request` | `closed`      | `true`    | `preview`              | The head branch will be deleted after merged |
-| `main`    | `pull_request` | `closed`      | `false`   | skip running workflows |                                              |
-| `develop` | `pull_request` | `closed`      | `false`   | skip running workflows |                                              |
-| `develop` | `pull_request` | `open`        | `false`   | `pr-{number}-preview`  |                                              |
-| `develop` | `pull_request` | `synchronize` | `false`   | `pr-{number}-preview`  |                                              |
+| Branch    | Event          | Event Type    | Is Merged | GitHub Environment     | Note                                                                    |
+| --------- | -------------- | ------------- | --------- | ---------------------- | ----------------------------------------------------------------------- |
+| `main`    | `pull_request` | `closed`      | `true`    | `production`           |                                                                         |
+| `main`    | `pull_request` | `open`        | `false`   | `staging`              |                                                                         |
+| `main`    | `pull_request` | `synchronize` | `false`   | `staging`              |                                                                         |
+| `develop` | `pull_request` | `closed`      | `true`    | `preview`              | The head branch and deployment environment will be deleted after merged |
+| `main`    | `pull_request` | `closed`      | `false`   | skip running workflows |                                                                         |
+| `develop` | `pull_request` | `closed`      | `false`   | skip running workflows |                                                                         |
+| `develop` | `pull_request` | `open`        | `false`   | `pr-{number}-preview`  |                                                                         |
+| `develop` | `pull_request` | `synchronize` | `false`   | `pr-{number}-preview`  |                                                                         |
 
 ## Want to learn more?
 
