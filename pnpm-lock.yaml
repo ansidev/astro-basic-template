@@ -7,7 +7,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.52.0
   '@typescript-eslint/parser': ^5.52.0
   astro: ^2.0.9
-  astro-compress: ^1.1.31
+  astro-compress: ^1.1.33
   astro-purgecss: ^2.0.0
   commitizen: ^4.3.0
   cz-conventional-changelog: ^3.3.0
