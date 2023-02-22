@@ -165,11 +165,12 @@ jobs:
       - name: Delete the PR branch after merged into develop
         env:
           GH_TOKEN: ${{ github.token }}
+          GIT_REF_PATH: /repos/${{ github.repository }}/git/refs/heads/${{ github.head_ref }}
         run: |
-          gh api \
-            --method DELETE \
-            -H "Accept: application/vnd.github+json" \
-            /repos/${{ github.repository }}/git/refs/heads/${{ github.head_ref }}
+          STATUS_CODE=$(gh api -i -H "Accept: application/vnd.github+json" $GIT_REF_PATH | head -1)
+          [ "$STATUS_CODE" == "HTTP/2.0 200 OK" ] && \
+            gh api --method DELETE -H "Accept: application/vnd.github+json" $GIT_REF_PATH || \
+            echo "Branch does not exist, deleting was ignored."
 
       - name: Delete the environment ${{ needs.set_deploy_environment.outputs.github_pr_environment }}
         if: needs.set_deploy_environment.outputs.github_pr_environment != ''
