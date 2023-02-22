@@ -11,6 +11,7 @@ This is a starter template for the new [Astro](https://astro.build) project whic
 - [Astro PurgeCSS](https://github.com/codiume/orbit/tree/main/packages/astro-purgecss) - Remove unused CSS from build output.
 - Automate releasing new versions using [GitHub Actions](https://github.com/features/actions) and following the [`git-flow`](https://nvie.com/posts/a-successful-git-branching-model/) branching model.
 - Automate [Netlify](https://netlify.com/) deployment, support GitHub deploy environment. [Go to section](#github-deploy-environment).
+- Automate rebasing PR branch via PR comment: `/rebase`, `/autosquash`, `/rebase-autosquash`.
 
 **Development features**
 
@@ -62,11 +63,14 @@ pnpm create astro@latest --template ansidev/astro-basic-template
 
 Inside of your Astro project, you'll see the following folders and files:
 
+<!-- tree -I 'node_modules|dist|.git|.husky|.netlify|.DS_Store' -a ./ -->
+
 ```
 /
 ├── .changes
-│   └── unreleased
-│       └── .gitkeep
+│   ├── unreleased
+│   │   └── .gitkeep
+│   ├── v*.md
 ├── .changie.yaml
 ├── .chglog
 │   ├── CHANGELOG.tpl.md
@@ -80,7 +84,11 @@ Inside of your Astro project, you'll see the following folders and files:
 ├── .github
 │   ├── FUNDING.yaml
 │   └── workflows
-│       └── deploy_to_netlify.yaml
+│       ├── auto_merge_release_hotfix_into_develop.yaml
+│       ├── deploy_to_netlify.yaml
+│       ├── draft_release_hotfix_pr.yaml
+│       ├── rebase.yaml
+│       └── release.yaml
 ├── .gitignore
 ├── .prettierignore
 ├── .prettierrc.cjs
@@ -94,9 +102,11 @@ Inside of your Astro project, you'll see the following folders and files:
 │   ├── extensions.json
 │   ├── launch.json
 │   └── settings.json
+├── CHANGELOG.md
 ├── LICENSE
 ├── README.md
 ├── Taskfile.yaml
+├── astro-basic-template.code-workspace
 ├── astro.config.mjs
 ├── dotenv.config.ts
 ├── eslint.config.cjs
