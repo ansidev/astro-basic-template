@@ -72,7 +72,7 @@ jobs:
     needs: set_deploy_environment
     environment:
       name: ${{ needs.set_deploy_environment.outputs.github_environment }}
-      url: ${{ steps.post_deploy.outputs.netlify_draft_url }}
+      url: ${{ steps.post_deploy.outputs.netlify_deploy_url }}
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -107,11 +107,11 @@ jobs:
       - name: Install Netlify CLI
         run: pnpm add --save-dev netlify-cli
 
-      - name: Set as Netlify production deployment
+      - name: Set as production environment
         if: needs.set_deploy_environment.outputs.github_environment == 'production'
         run: echo "PROD=true" >> $GITHUB_ENV
 
-      - name: Deploy preview
+      - name: Deploy ${{ needs.set_deploy_environment.outputs.github_environment }}
         id: deploy
         if: success()
         env:
@@ -120,16 +120,25 @@ jobs:
         shell: bash
         run: |
           set -e
-          OUTPUT=$(pnpm netlify deploy \
-            --auth ${{ env.NETLIFY_AUTH_TOKEN }} \
-            --site ${{ env.NETLIFY_SITE_ID }} \
-            --json \
-            --build \
-            --context deploy-preview \
-            --alias ${NETLIFY_DEPLOY_ALIAS} \
-            --message "$(git log -1 --pretty=%s)" \
-            --prod ${PROD:-false} \
-            | tr '\n' ' ')
+          [[ ${PROD:-false} == "true" ]] && \
+            OUTPUT=$(pnpm netlify deploy \
+              --auth ${{ env.NETLIFY_AUTH_TOKEN }} \
+              --site ${{ env.NETLIFY_SITE_ID }} \
+              --json \
+              --build \
+              --context production \
+              --message "$(git log -1 --pretty=%s)" \
+              --prod \
+              | tr '\n' ' ') || \
+            OUTPUT=$(pnpm netlify deploy \
+              --auth ${{ env.NETLIFY_AUTH_TOKEN }} \
+              --site ${{ env.NETLIFY_SITE_ID }} \
+              --json \
+              --build \
+              --context deploy-preview \
+              --alias ${NETLIFY_DEPLOY_ALIAS} \
+              --message "$(git log -1 --pretty=%s)" \
+              | tr '\n' ' ')
           set +e
 
           NETLIFY_OUTPUT=$(echo "$OUTPUT")
@@ -137,17 +146,16 @@ jobs:
           echo "netlify_output=$NETLIFY_OUTPUT" >> $GITHUB_OUTPUT
           echo "success=true" >> $GITHUB_OUTPUT
 
-      - name: Post deploy
+      - name: Post deploy ${{ needs.set_deploy_environment.outputs.github_environment }}
         id: post_deploy
         if: success()
         env:
-          NETLIFY_LOGS_URL: ${{ fromJson(steps.deploy.outputs.netlify_output).logs }}
           NETLIFY_DRAFT_URL: ${{ fromJson(steps.deploy.outputs.netlify_output).deploy_url }}
           NETLIFY_PROD_URL: ${{ fromJson(steps.deploy.outputs.netlify_output).url }}
         run: |
-          echo "netlify_logs_url=$NETLIFY_LOGS_URL" >> $GITHUB_OUTPUT
-          echo "netlify_draft_url=$NETLIFY_DRAFT_URL" >> $GITHUB_OUTPUT
-          echo "netlify_prod_url=$NETLIFY_PROD_URL" >> $GITHUB_OUTPUT
+          [[ ${PROD:-false} == "true" ]] && \
+            echo "netlify_deploy_url=$NETLIFY_PROD_URL" >> $GITHUB_OUTPUT || \
+            echo "netlify_deploy_url=$NETLIFY_DRAFT_URL" >> $GITHUB_OUTPUT
 
     outputs:
       success: ${{ steps.deploy.outputs.success }}
@@ -168,7 +176,7 @@ jobs:
           GIT_REF_PATH: /repos/${{ github.repository }}/git/refs/heads/${{ github.head_ref }}
         run: |
           STATUS_CODE=$(gh api -i -H "Accept: application/vnd.github+json" $GIT_REF_PATH | head -1)
-          [ "$STATUS_CODE" == "HTTP/2.0 200 OK" ] && \
+          [[ "$STATUS_CODE" == "HTTP/2.0 200 OK" ]] && \
             gh api --method DELETE -H "Accept: application/vnd.github+json" $GIT_REF_PATH || \
             echo "Branch does not exist, deleting was ignored."
 
