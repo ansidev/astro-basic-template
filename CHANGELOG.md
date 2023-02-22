@@ -4,6 +4,26 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v1.0.1](https://github.com/ansidev/astro-basic-template/compare/v1.0.1-rc.0...v1.0.1) (2023-02-22)
+
+### Bug Fixes
+
+- Wrong production URL.
+- Ignore deleting PR branch if it does not exist to avoid failed jobs.
+
+### Dependencies
+
+| Package                          | Version                |
+| -------------------------------- | ---------------------- |
+| @typescript-eslint/eslint-plugin | `5.52.0` `->` `5.53.0` |
+| @typescript-eslint/parser        | `5.52.0` `->` `5.53.0` |
+
+### Documentations
+
+- **readme:** add features and update the project structure
+
+Full Changelog: [v1.0.0...v1.0.1](https://github.com/ansidev/astro-basic-template/compare/v1.0.0...v1.0.1)
+
 ## [v1.0.1-rc.0](https://github.com/ansidev/astro-basic-template/compare/v1.0.0...v1.0.1-rc.0) (2023-02-22)
 
 ### Bug Fixes
