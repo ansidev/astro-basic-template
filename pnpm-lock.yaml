@@ -7,7 +7,7 @@ specifiers:
   '@typescript-eslint/eslint-plugin': ^5.53.0
   '@typescript-eslint/parser': ^5.53.0
   astro: ^2.0.14
-  astro-compress: ^1.1.33
+  astro-compress: ^1.1.35
   astro-purgecss: ^2.0.0
   commitizen: ^4.3.0
   dotenv: ^16.0.3
@@ -19,7 +19,7 @@ specifiers:
 
 dependencies:
   astro: 2.0.14_@types+node@18.14.0
-  astro-compress: 1.1.33
+  astro-compress: 1.1.35
   astro-purgecss: 2.0.0_astro@2.0.14
 
 devDependencies:
@@ -1260,18 +1260,18 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /astro-compress/1.1.33:
-    resolution: {integrity: sha512-i9LuEzQAeYPs9Vn+FbN9bdPDa/g2PYddT1GOkoUacFpAZCl9qIYFFvacULjeZIMMKhrRkPZ5f9lZVC3RJP7Qpg==}
+  /astro-compress/1.1.35:
+    resolution: {integrity: sha512-K6BK+iMbejXeUS1eAjoQhRh4geEutFrGkgCkeTAthf1XeRzPrWvtNPA7RjJBXWR8aNJtjryxyW02z3pE+4RNow==}
     dependencies:
       '@types/csso': 5.0.0
       '@types/html-minifier-terser': 7.0.0
       '@types/sharp': 0.31.1
       csso: 5.0.5
-      files-pipeline: 0.0.3
+      files-pipe: 0.0.1
       html-minifier-terser: 7.1.0
       sharp: 0.31.3
       svgo: 3.0.2
-      terser: 5.16.3
+      terser: 5.16.5
     dev: false
 
   /astro-eslint-parser/0.11.0:
@@ -1903,6 +1903,11 @@ packages:
     engines: {node: '>=12.4.0'}
     dev: false
 
+  /deepmerge-ts/4.3.0:
+    resolution: {integrity: sha512-if3ZYdkD2dClhnXR5reKtG98cwyaRT1NeugQoAPTTfsOpV9kqyeiBF9Qa5RHjemb3KzD5ulqygv6ED3t5j9eJw==}
+    engines: {node: '>=12.4.0'}
+    dev: false
+
   /defaults/1.0.4:
     resolution: {integrity: sha512-eFuaLoy/Rxalv2kr+lqMlUnrDWV+3j4pljOIJgLIhI058IQfWJ7vXhyEIHu+HtC738klGALYxOKDO0bQP3tg8A==}
     dependencies:
@@ -2371,10 +2376,10 @@ packages:
       flat-cache: 3.0.4
     dev: true
 
-  /files-pipeline/0.0.3:
-    resolution: {integrity: sha512-dtHt96Rs0qsNBnIlPuHUP8vd5xPRGbMYgywMfA2Qy83QPz8feoWsoXSuxxLsWYv4vag+vAhNZ4YOHL0pdyGKFA==}
+  /files-pipe/0.0.1:
+    resolution: {integrity: sha512-+U75QMGwmNi6S3cLJPCXtCWCUP3QTKCf6zwtW+7A+OS06PDbiX6MOPI3KE6XZZKLl0UYdiB3rimyFeqZDUdh1g==}
     dependencies:
-      deepmerge-ts: 4.2.2
+      deepmerge-ts: 4.3.0
       fast-glob: 3.2.12
     dev: false
 
@@ -2774,7 +2779,7 @@ packages:
       entities: 4.4.0
       param-case: 3.0.4
       relateurl: 0.2.7
-      terser: 5.16.3
+      terser: 5.16.5
     dev: false
 
   /html-void-elements/2.0.1:
@@ -4717,8 +4722,8 @@ packages:
       readable-stream: 3.6.0
     dev: false
 
-  /terser/5.16.3:
-    resolution: {integrity: sha512-v8wWLaS/xt3nE9dgKEWhNUFP6q4kngO5B8eYFUuebsu7Dw/UNAnpUod6UHo04jSSkv8TzKHjZDSd7EXdDQAl8Q==}
+  /terser/5.16.5:
+    resolution: {integrity: sha512-qcwfg4+RZa3YvlFh0qjifnzBHjKGNbtDo9yivMqMFDy9Q6FSaQWSB/j1xKhsoUFJIqDOM3TsN6D5xbrMrFcHbg==}
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
