@@ -23,6 +23,6 @@ tasks:
   clean:
     desc: Clean the build output
     cmds:
-      - rm -r {{.OUTPUT_DIR}}
+      - rm -r ./{{.OUTPUT_DIR}}
     silent: true
     ignore_error: true
