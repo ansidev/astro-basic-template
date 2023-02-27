@@ -6,7 +6,7 @@ specifiers:
   '@types/node': ^18.14.0
   '@typescript-eslint/eslint-plugin': ^5.53.0
   '@typescript-eslint/parser': ^5.53.0
-  astro: ^2.0.14
+  astro: ^2.0.15
   astro-compress: ^1.1.35
   astro-purgecss: ^2.0.0
   commitizen: ^4.3.0
@@ -18,9 +18,9 @@ specifiers:
   typescript: ^4.9.5
 
 dependencies:
-  astro: 2.0.14_@types+node@18.14.0
+  astro: 2.0.15_@types+node@18.14.0
   astro-compress: 1.1.35
-  astro-purgecss: 2.0.0_astro@2.0.14
+  astro-purgecss: 2.0.0_astro@2.0.15
 
 devDependencies:
   '@commitlint/cli': 17.4.4
@@ -71,13 +71,13 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark/2.0.1_astro@2.0.14:
+  /@astrojs/markdown-remark/2.0.1_astro@2.0.15:
     resolution: {integrity: sha512-xQF1rXGJN18m+zZucwRRtmNehuhPMMhZhi6HWKrtpEAKnHSPk8lqf1GXgKH7/Sypglu8ivdECZ+EGs6kOYVasQ==}
     peerDependencies:
       astro: ^2.0.2
     dependencies:
       '@astrojs/prism': 2.0.0
-      astro: 2.0.14_@types+node@18.14.0
+      astro: 2.0.15_@types+node@18.14.0
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.0
       rehype-raw: 6.1.1
@@ -1289,23 +1289,23 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss/2.0.0_astro@2.0.14:
+  /astro-purgecss/2.0.0_astro@2.0.15:
     resolution: {integrity: sha512-xt8Wvhkgp3Q3qgwGxtNPZ+KmnO29Rs7K2g2e4imIaWkNnXUMoCG7S0n8/m2ZwXRF9snI5h1DV8N80zZHj7Jx3A==}
     peerDependencies:
       astro: ^2.0.0
     dependencies:
-      astro: 2.0.14_@types+node@18.14.0
+      astro: 2.0.15_@types+node@18.14.0
       purgecss: 5.0.0
     dev: false
 
-  /astro/2.0.14_@types+node@18.14.0:
-    resolution: {integrity: sha512-BiXnHyK3rj5Uz45V5p9jRi0xtJc/zxhCxnXYAekHHF1bVvvoa3aXMwl0GZ3Bc0mxP6vPLmbRcjNKdqfyZn1B3Q==}
+  /astro/2.0.15_@types+node@18.14.0:
+    resolution: {integrity: sha512-CUJNrcdgcSjASValRNEesTgXSefgQ8Z9GHrZXckmTivatoBlVkYb8G8tmk7dgRt6JF+bwfOsA6cGdv7+G7hCbA==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
       '@astrojs/compiler': 1.1.0
       '@astrojs/language-server': 0.28.3
-      '@astrojs/markdown-remark': 2.0.1_astro@2.0.14
+      '@astrojs/markdown-remark': 2.0.1_astro@2.0.15
       '@astrojs/telemetry': 2.0.0
       '@astrojs/webapi': 2.0.1
       '@babel/core': 7.20.7
@@ -1322,7 +1322,7 @@ packages:
       common-ancestor-path: 1.0.1
       cookie: 0.5.0
       debug: 4.3.4
-      deepmerge-ts: 4.2.2
+      deepmerge-ts: 4.3.0
       devalue: 4.2.0
       diff: 5.1.0
       es-module-lexer: 1.1.0
@@ -1897,11 +1897,6 @@ packages:
   /deep-is/0.1.4:
     resolution: {integrity: sha512-oIPzksmTg4/MriiaYGO+okXDT7ztn/w3Eptv/+gSIdMdKsJo0u4CfYNFJPy+4SKMuCqGw2wxnA+URMg3t8a/bQ==}
     dev: true
-
-  /deepmerge-ts/4.2.2:
-    resolution: {integrity: sha512-Ka3Kb21tiWjvQvS9U+1Dx+aqFAHsdTnMdYptLTmC2VAmDFMugWMY1e15aTODstipmCun8iNuqeSfcx6rsUUk0Q==}
-    engines: {node: '>=12.4.0'}
-    dev: false
 
   /deepmerge-ts/4.3.0:
     resolution: {integrity: sha512-if3ZYdkD2dClhnXR5reKtG98cwyaRT1NeugQoAPTTfsOpV9kqyeiBF9Qa5RHjemb3KzD5ulqygv6ED3t5j9eJw==}
