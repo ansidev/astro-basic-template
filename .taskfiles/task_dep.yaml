@@ -10,6 +10,7 @@ includes:
   site:
     taskfile: ./task_site.yaml
     internal: true
+    dir: ../
   git:
     taskfile: ./task_git.yaml
     internal: true
