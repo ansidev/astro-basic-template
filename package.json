@@ -1,7 +1,7 @@
 {
   "name": "astro-starter-template",
   "type": "module",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -12,36 +12,25 @@
     "astro": "astro",
     "prepare": "astro telemetry disable && husky install",
     "type-check": "astro check && tsc --noEmit",
-    "lint": "eslint --ext .cjs,.mjs,.ts,.astro --ignore-path .gitignore .",
-    "release:major": "standard-version --release-as major",
-    "release:minor": "standard-version --release-as minor",
-    "release:patch": "standard-version --release-as patch",
-    "release:pre": "standard-version --prerelease rc"
+    "lint": "eslint --ext .cjs,.mjs,.ts,.astro --ignore-path .gitignore ."
   },
   "dependencies": {
-    "astro": "^2.0.14",
-    "astro-compress": "^1.1.33",
-    "astro-purgecss": "^2.0.0"
+    "astro": "^2.1.2",
+    "astro-compress": "^1.1.35",
+    "astro-purgecss": "^2.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
     "@commitlint/config-conventional": "^17.4.4",
-    "@types/node": "^18.14.0",
-    "@typescript-eslint/eslint-plugin": "^5.53.0",
-    "@typescript-eslint/parser": "^5.53.0",
+    "@types/node": "^18.15.0",
+    "@typescript-eslint/eslint-plugin": "^5.54.1",
+    "@typescript-eslint/parser": "^5.54.1",
     "commitizen": "^4.3.0",
-    "cz-conventional-changelog": "^3.3.0",
     "dotenv": "^16.0.3",
-    "eslint": "^8.34.0",
-    "eslint-plugin-astro": "^0.23.0",
+    "eslint": "^8.35.0",
+    "eslint-plugin-astro": "^0.24.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
-    "standard-version": "^9.5.0",
     "typescript": "^4.9.5"
-  },
-  "standard-version": {
-    "skip": {
-      "tag": true
-    }
   }
 }

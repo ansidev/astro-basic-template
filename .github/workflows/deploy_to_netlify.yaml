@@ -172,7 +172,7 @@ jobs:
     steps:
       - name: Delete the PR branch after merged into develop
         env:
-          GH_TOKEN: ${{ github.token }}
+          GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GIT_REF_PATH: /repos/${{ github.repository }}/git/refs/heads/${{ github.head_ref }}
         run: |
           STATUS_CODE=$(gh api -i -H "Accept: application/vnd.github+json" $GIT_REF_PATH | head -1)
