@@ -8,7 +8,7 @@ specifiers:
   '@typescript-eslint/parser': ^5.54.0
   astro: ^2.0.16
   astro-compress: ^1.1.35
-  astro-purgecss: ^2.0.0
+  astro-purgecss: ^2.0.1
   commitizen: ^4.3.0
   dotenv: ^16.0.3
   eslint: ^8.35.0
@@ -20,7 +20,7 @@ specifiers:
 dependencies:
   astro: 2.0.16_@types+node@18.14.2
   astro-compress: 1.1.35
-  astro-purgecss: 2.0.0_astro@2.0.16
+  astro-purgecss: 2.0.1_astro@2.0.16
 
 devDependencies:
   '@commitlint/cli': 17.4.4
@@ -1289,8 +1289,8 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss/2.0.0_astro@2.0.16:
-    resolution: {integrity: sha512-xt8Wvhkgp3Q3qgwGxtNPZ+KmnO29Rs7K2g2e4imIaWkNnXUMoCG7S0n8/m2ZwXRF9snI5h1DV8N80zZHj7Jx3A==}
+  /astro-purgecss/2.0.1_astro@2.0.16:
+    resolution: {integrity: sha512-G1DYu2wvfodPc4fTBcCOaKGuTBosyHZnXEgfKh64e4eCaHupCeaBrrIwBxFUePFZIvm1vciDWYUiPIG7qTKgOg==}
     peerDependencies:
       astro: ^2.0.0
     dependencies:
@@ -4002,15 +4002,6 @@ packages:
       cssesc: 3.0.0
       util-deprecate: 1.0.2
 
-  /postcss/8.4.20:
-    resolution: {integrity: sha512-6Q04AXR1212bXr5fh03u8aAwbLxAQNGQ/Q1LNa0VfOI06ZAlhPHtQvE4OIdpj4kLThXilalPnmDSOD65DcHt+g==}
-    engines: {node: ^10 || ^12 || >=14}
-    dependencies:
-      nanoid: 3.3.4
-      picocolors: 1.0.0
-      source-map-js: 1.0.2
-    dev: false
-
   /postcss/8.4.21:
     resolution: {integrity: sha512-tP7u/Sn/dVxK2NnruI4H9BG+x+Wxz6oeZ1cJ8P6G/PZY0IKk4k/63TDsQf2kQq3+qoJeLm2kIBUNlZe3zgb4Zg==}
     engines: {node: ^10 || ^12 || >=14}
@@ -4104,7 +4095,7 @@ packages:
     dependencies:
       commander: 9.5.0
       glob: 8.1.0
-      postcss: 8.4.20
+      postcss: 8.4.21
       postcss-selector-parser: 6.0.11
     dev: false
 

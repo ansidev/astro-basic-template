@@ -17,7 +17,7 @@
   "dependencies": {
     "astro": "^2.0.16",
     "astro-compress": "^1.1.35",
-    "astro-purgecss": "^2.0.0"
+    "astro-purgecss": "^2.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.4.4",
