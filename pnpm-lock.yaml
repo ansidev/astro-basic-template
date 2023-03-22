@@ -15,7 +15,7 @@ specifiers:
   eslint-plugin-astro: ^0.26.1
   eslint-plugin-simple-import-sort: ^10.0.0
   husky: ^8.0.3
-  typescript: ^5.0.0
+  typescript: ^5.0.2
 
 dependencies:
   astro: 2.1.5_@types+node@18.15.5
