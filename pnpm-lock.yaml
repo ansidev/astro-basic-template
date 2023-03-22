@@ -12,7 +12,7 @@ specifiers:
   commitizen: ^4.3.0
   dotenv: ^16.0.3
   eslint: ^8.36.0
-  eslint-plugin-astro: ^0.26.0
+  eslint-plugin-astro: ^0.26.1
   eslint-plugin-simple-import-sort: ^10.0.0
   husky: ^8.0.3
   typescript: ^5.0.0
@@ -31,7 +31,7 @@ devDependencies:
   commitizen: 4.3.0
   dotenv: 16.0.3
   eslint: 8.36.0
-  eslint-plugin-astro: 0.26.0_eslint@8.36.0
+  eslint-plugin-astro: 0.26.1_eslint@8.36.0
   eslint-plugin-simple-import-sort: 10.0.0_eslint@8.36.0
   husky: 8.0.3
   typescript: 5.0.2
@@ -1297,8 +1297,8 @@ packages:
       terser: 5.16.5
     dev: false
 
-  /astro-eslint-parser/0.13.0:
-    resolution: {integrity: sha512-6dYYe7GOxZYSvLineTWQA1ienSVRrfuLJEtSeSqayp+yKXPe07gvfn0BNBMsJH822L+BRjbDIZBg1arFLadH4Q==}
+  /astro-eslint-parser/0.13.1:
+    resolution: {integrity: sha512-BZAV77XFIDGWm+DuxZBT2OJo+4W98f+LylF64xQ0pWYfIRJA5zVK3L/RM3Gr+4obBg91RnSibN3Ofc3nIwHYiw==}
     engines: {node: ^14.18.0 || >=16.0.0}
     dependencies:
       '@astrojs/compiler': 1.2.0
@@ -1307,7 +1307,7 @@ packages:
       astrojs-compiler-sync: 0.3.1_@astrojs+compiler@1.2.0
       debug: 4.3.4
       eslint-visitor-keys: 3.3.0
-      espree: 9.4.1
+      espree: 9.5.0
       semver: 7.3.8
     transitivePeerDependencies:
       - supports-color
@@ -2156,8 +2156,8 @@ packages:
     engines: {node: '>=12'}
     dev: false
 
-  /eslint-plugin-astro/0.26.0_eslint@8.36.0:
-    resolution: {integrity: sha512-izKb6/3Y/unEAy6xVNqahMe5cQ1rDYz4+ItliwTXyuM46IMSieaSH3OSOOD/NfcWaEi1wt/1pwqYGeqDQBwMeg==}
+  /eslint-plugin-astro/0.26.1_eslint@8.36.0:
+    resolution: {integrity: sha512-FEZOrOQ5ahenbwjKz5LYJpeOZUggDM54idrq5bTJdL4GsXy1xx2eyKy5UjGhh8NwddowCCPqfDHFfDz9oNj/ew==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       eslint: '>=7.0.0'
@@ -2165,7 +2165,7 @@ packages:
       '@eslint-community/eslint-utils': 4.3.0_eslint@8.36.0
       '@jridgewell/sourcemap-codec': 1.4.14
       '@typescript-eslint/types': 5.54.1
-      astro-eslint-parser: 0.13.0
+      astro-eslint-parser: 0.13.1
       eslint: 8.36.0
       postcss: 8.4.21
       postcss-selector-parser: 6.0.11
@@ -2264,15 +2264,6 @@ packages:
       text-table: 0.2.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
-
-  /espree/9.4.1:
-    resolution: {integrity: sha512-XwctdmTO6SIvCzd9810yyNzIrOrqNYV9Koizx4C/mRhf9uq0o4yHoCEU/670pOxOL/MSraektvSAji79kX90Vg==}
-    engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
-    dependencies:
-      acorn: 8.8.1
-      acorn-jsx: 5.3.2_acorn@8.8.1
-      eslint-visitor-keys: 3.3.0
     dev: true
 
   /espree/9.5.0:
