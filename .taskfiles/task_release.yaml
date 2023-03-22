@@ -21,7 +21,6 @@ tasks:
     cmds:
       - rm ${CHANGES_DIR}/${TAG_PREFIX}*.md || true
       - for VERSION_TAG in $(git -c 'versionsort.suffix=-' tag --list --sort=v:refname); do git-chglog --output ${CHANGES_DIR}/${VERSION_TAG}.md ${VERSION_TAG} ; done
-    silent: true
 
   changelog:
     desc: Generate changelog for an existing version
@@ -29,7 +28,6 @@ tasks:
       VERSION_TAG: ${TAG_PREFIX}{{.CLI_ARGS}}
     cmds:
       - git-chglog --output ${CHANGES_DIR}/{{.VERSION_TAG}}.md {{.VERSION_TAG}}
-    silent: true
 
   changelog_next:
     desc: Generate changelog for a new version
@@ -37,7 +35,6 @@ tasks:
       VERSION_TAG: ${TAG_PREFIX}{{.CLI_ARGS}}
     cmds:
       - git-chglog --output ${CHANGES_DIR}/{{.VERSION_TAG}}.md --next-tag {{.VERSION_TAG}} {{.VERSION_TAG}}
-    silent: true
 
   commit_release:
     desc: Create release commit
@@ -49,7 +46,6 @@ tasks:
       - git add {{.VERSION_FILE}}
       - |
         git commit -m "chore(release): {{.VERSION_TAG}}"
-    silent: true
 
   create:
     desc: Generate release commit
@@ -60,4 +56,3 @@ tasks:
       - task release:changelog_next -- {{.CLI_ARGS}}
       - changie merge
       - task release:commit_release -- {{.CLI_ARGS}}
-    silent: true

@@ -8,4 +8,3 @@ tasks:
         sh: git branch --show
     cmds:
       - git push -u origin {{.BRANCH_NAME}}
-    silent: true

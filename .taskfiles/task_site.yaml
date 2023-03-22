@@ -11,7 +11,6 @@ tasks:
     desc: Install dependencies
     cmds:
       - ${PACKAGE_MANAGER} install
-    silent: true
 
   build:
     desc: Build site
@@ -24,5 +23,4 @@ tasks:
     desc: Clean the build output
     cmds:
       - rm -r ./{{.OUTPUT_DIR}}
-    silent: true
     ignore_error: true
