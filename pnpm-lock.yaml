@@ -6,7 +6,7 @@ specifiers:
   '@types/node': ^18.15.7
   '@typescript-eslint/eslint-plugin': ^5.56.0
   '@typescript-eslint/parser': ^5.56.0
-  astro: ^2.1.5
+  astro: ^2.1.6
   astro-compress: ^1.1.35
   astro-purgecss: ^2.0.1
   commitizen: ^4.3.0
@@ -18,9 +18,9 @@ specifiers:
   typescript: ^5.0.2
 
 dependencies:
-  astro: 2.1.5_@types+node@18.15.7
+  astro: 2.1.6_@types+node@18.15.7
   astro-compress: 1.1.35
-  astro-purgecss: 2.0.1_astro@2.1.5
+  astro-purgecss: 2.0.1_astro@2.1.6
 
 devDependencies:
   '@commitlint/cli': 17.5.0
@@ -71,13 +71,13 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark/2.1.2_astro@2.1.5:
+  /@astrojs/markdown-remark/2.1.2_astro@2.1.6:
     resolution: {integrity: sha512-rYkmFEv2w7oEk6ZPgxHkhWzwcxSUGc1vJU0cbCu5sHF8iFNnc1cmMsjXWa5DrU5sCEf8VVYE1iFlbbnFzvHQJw==}
     peerDependencies:
       astro: ^2.1.5
     dependencies:
       '@astrojs/prism': 2.1.0
-      astro: 2.1.5_@types+node@18.15.7
+      astro: 2.1.6_@types+node@18.15.7
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.0
       rehype-raw: 6.1.1
@@ -1334,17 +1334,17 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss/2.0.1_astro@2.1.5:
+  /astro-purgecss/2.0.1_astro@2.1.6:
     resolution: {integrity: sha512-G1DYu2wvfodPc4fTBcCOaKGuTBosyHZnXEgfKh64e4eCaHupCeaBrrIwBxFUePFZIvm1vciDWYUiPIG7qTKgOg==}
     peerDependencies:
       astro: ^2.0.0
     dependencies:
-      astro: 2.1.5_@types+node@18.15.7
+      astro: 2.1.6_@types+node@18.15.7
       purgecss: 5.0.0
     dev: false
 
-  /astro/2.1.5_@types+node@18.15.7:
-    resolution: {integrity: sha512-NFHFkf3DkyV/9FQ9uMxXx9KP9a6nBOMDd9OC9SWgCwTJc2+Cm4oL94BnKmZ2SNR124pSoKimnaBkZncTYmIVwA==}
+  /astro/2.1.6_@types+node@18.15.7:
+    resolution: {integrity: sha512-CQg5WsQhjx28/BWnrBN9doZSK/2OWF+VJlierkEnRSYeiSrhUfsCW33RBKtrBPEHp5pHWTlAU6pQkJ4FQht0Sw==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -1355,7 +1355,7 @@ packages:
     dependencies:
       '@astrojs/compiler': 1.2.0
       '@astrojs/language-server': 0.28.3
-      '@astrojs/markdown-remark': 2.1.2_astro@2.1.5
+      '@astrojs/markdown-remark': 2.1.2_astro@2.1.6
       '@astrojs/telemetry': 2.1.0
       '@astrojs/webapi': 2.1.0
       '@babel/core': 7.20.7
