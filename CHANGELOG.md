@@ -4,6 +4,25 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v1.0.4](https://github.com/ansidev/astro-basic-template/compare/v1.0.3...v1.0.4) (2023-03-28)
+
+### Bug Fixes
+
+- **changelog:** correct changelog v1.0.3
+
+- **taskfile:** use snake_case for task name
+
+### Dependencies
+
+| Package                            | Version                     |
+| ---------------------------------- | --------------------------- |
+| `astro`                            | `^2.1.5` `->` `^2.1.7`      |
+| `@types/node`                      | `^18.15.5` `->` `^18.15.10` |
+| `@typescript-eslint/eslint-plugin` | `^5.56.0` `->` `^5.57.0`    |
+| `@typescript-eslint/parser`        | `^5.56.0` `->` `^5.57.0`    |
+
+Full Changelog: [v1.0.3...v1.0.4](https://github.com/ansidev/astro-basic-template/compare/v1.0.3...v1.0.4)
+
 ## [v1.0.3](https://github.com/ansidev/astro-basic-template/compare/v1.0.2...v1.0.3) (2023-03-23)
 
 ### Bug Fixes
@@ -25,7 +44,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) a
 | `@types/node`                      | `^18.15.0` `->` `^18.15.5` |
 | `@typescript-eslint/eslint-plugin` | `^5.54.1` `->` `^5.56.0`   |
 | `@typescript-eslint/parser`        | `^5.54.1` `->` `^5.56.0`   |
-| `eslint`                           | `^8.35.0` `->` `^8.35.0`   |
+| `eslint`                           | `^8.35.0` `->` `^8.36.0`   |
 | `eslint-plugin-astro`              | `^0.24.0` `->` `^0.26.1`   |
 | `typescript`                       | `^4.9.5` `->` `^5.0.2`     |
 

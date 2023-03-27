@@ -1,6 +1,7 @@
 # astro-starter-template
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fd1cd0b9-147e-458c-b7d5-13bdfe3f20df/deploy-status)](https://app.netlify.com/sites/astro-basic-template-asd/deploys)
 
 This is a starter template for the new [Astro](https://astro.build) project which is created by [ansidev](https://github.com/ansidev).
 
@@ -151,7 +152,7 @@ All commands are run from the root of the project, from a terminal:
 | Command                   | Action                                                            |
 | ------------------------- | ----------------------------------------------------------------- |
 | `dep:commit`              | Commit changes after updating package version                     |
-| `dep:init-dep-branch`     | Init git branch deps/*                                            |
+| `dep:init_dep_branch`     | Init git branch deps/*                                            |
 | `dep:update`              | Check whether the new version of the npm package broke the build. |
 | `git:push_current`        | Push current branch                                               |
 | `release:batch_changelog` | Generate changelog for existing git tags                          |
