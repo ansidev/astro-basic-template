@@ -1,6 +1,7 @@
 # astro-starter-template
 
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/fd1cd0b9-147e-458c-b7d5-13bdfe3f20df/deploy-status)](https://app.netlify.com/sites/astro-basic-template-asd/deploys)
 
 This is a starter template for the new [Astro](https://astro.build) project which is created by [ansidev](https://github.com/ansidev).
 
