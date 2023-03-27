@@ -19,7 +19,7 @@ includes:
     internal: true
 
 tasks:
-  init-dep-branch:
+  init_dep_branch:
     desc: Init git branch {{.BRANCH_DEP_PREFIX}}/*
     cmds:
       - git pull {{.GIT_REMOTE}} {{.BRANCH_BASE}}:{{.BRANCH_BASE}}
@@ -30,7 +30,7 @@ tasks:
   update:
     desc: Check whether the new version of the npm package broke the build.
     cmds:
-      - task: init-dep-branch
+      - task: init_dep_branch
         vars:
           BRANCH_NAME: "{{.CLI_ARGS}}"
       - ncu -u -f {{.CLI_ARGS}}
