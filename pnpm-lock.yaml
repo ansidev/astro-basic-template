@@ -5,8 +5,8 @@ dependencies:
     specifier: ^2.3.0
     version: 2.3.0(@types/node@18.16.0)
   astro-compress:
-    specifier: ^1.1.41
-    version: 1.1.41
+    specifier: ^1.1.42
+    version: 1.1.42
   astro-purgecss:
     specifier: ^2.0.1
     version: 2.0.1(astro@2.3.0)
@@ -1322,8 +1322,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: true
 
-  /astro-compress@1.1.41:
-    resolution: {integrity: sha512-avAlzu3uNWLIKCXS5OlnJEmO779Ua8f3kdNaTqv5+BOIGel1glXqQNM8diIV48nVfuEp7aVSLaij1udjsvLAjw==}
+  /astro-compress@1.1.42:
+    resolution: {integrity: sha512-heMdV3amY/k1NA4FHuNu1Nwady834tY79x8O39fBSlSvBpgESUCX2qergd7sMsaWushwqr47hWaSrfItELGaUg==}
     dependencies:
       '@lightrix/config': 0.0.11
       '@lightrix/scripts': 1.0.3
