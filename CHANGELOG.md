@@ -4,6 +4,28 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v1.0.6](https://github.com/ansidev/astro-basic-template/compare/v1.0.5...v1.0.6) (2023-05-08)
+
+### Bug Fixes
+
+- **deps:** update dependency astro to ^2.4.2
+
+- **deps:** update dependency astro to ^2.4.0
+
+- **deps:** update dependency astro to ^2.3.4
+
+- **deps:** update dependency astro to ^2.3.2
+
+- **deps:** update dependency astro to ^2.3.1
+
+- **deps:** update dependency astro-compress to ^1.1.42
+
+- **deps:** update dependency astro-compress to ^1.1.41
+
+- **deps:** update dependency astro-compress to ^1.1.40
+
+Full Changelog: [v1.0.5...v1.0.6](https://github.com/ansidev/astro-basic-template/compare/v1.0.5...v1.0.6)
+
 ## [v1.0.5](https://github.com/ansidev/astro-basic-template/compare/v1.0.4...v1.0.5) (2023-04-20)
 
 ### Bug Fixes
