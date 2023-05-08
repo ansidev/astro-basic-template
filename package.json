@@ -13,7 +13,8 @@
     "prepare": "astro telemetry disable && husky install",
     "lint:js": "eslint --ext .cjs,.mjs,.ts,.astro --ignore-path .gitignore .",
     "lint:ts": "astro check && tsc --noEmit",
-    "lint": "pnpm run lint:js && pnpm run lint:ts"
+    "lint": "pnpm run lint:js && pnpm run lint:ts",
+    "test": "vitest"
   },
   "dependencies": {
     "astro": "^2.6.1",
@@ -32,6 +33,7 @@
     "eslint-plugin-astro": "^0.27.1",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
-    "typescript": "^5.1.3"
+    "typescript": "^5.1.3",
+    "vitest": "^0.32.0"
   }
 }
