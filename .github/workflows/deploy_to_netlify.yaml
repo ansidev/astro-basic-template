@@ -81,7 +81,7 @@ jobs:
     needs: set_deploy_environment
     environment:
       name: ${{ needs.set_deploy_environment.outputs.github_environment }}
-      url: ${{ steps.deploy.outputs.netlify_deploy_url }}
+      url: ${{ steps.deploy.outputs.netlify-deploy-url }}
     runs-on: ubuntu-latest
     steps:
       - name: Set app environment variables
@@ -95,7 +95,6 @@ jobs:
         uses: ghacts/static-site@main
         with:
           node-version: 18
-          skip-test: true
 
       - name: Deploy
         id: deploy
