@@ -11,8 +11,9 @@
     "preview": "astro preview",
     "astro": "astro",
     "prepare": "astro telemetry disable && husky install",
-    "type-check": "astro check && tsc --noEmit",
-    "lint": "eslint --ext .cjs,.mjs,.ts,.astro --ignore-path .gitignore ."
+    "lint:js": "eslint --ext .cjs,.mjs,.ts,.astro --ignore-path .gitignore .",
+    "lint:ts": "astro check && tsc --noEmit",
+    "lint": "pnpm run lint:js && pnpm run lint:ts"
   },
   "dependencies": {
     "astro": "^2.5.5",
