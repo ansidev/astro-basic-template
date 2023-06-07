@@ -21,6 +21,7 @@ This is a starter template for the new [Astro](https://astro.build) project whic
 - [ESLint](https://eslint.org) - Static code analyzer.
 - [Prettier](https://prettier.io) - Code formatter.
 - [Renovate](https://www.mend.io/free-developer-tools/renovate/) - Automate dependency updates.
+- [Vitest](https://vitest.dev/) - Blazing Fast Unit Test Framework.
 - [changie](https://changie.dev), [git-chglog](https://github.com/git-chglog/git-chglog) - Generate changelog from conventional commits.
 - [taskfile](https://github.com/ansidev/taskfile) - Task files for common tasks.
 
@@ -54,10 +55,10 @@ pnpm create astro@latest --template ansidev/astro-basic-template
      - https://docs.netlify.com/site-deploys/overview/#deploy-preview-controls
 3. Go to https://github.com/{user}/{repository}/settings/secrets/actions/new and add following repository secrets:
 
-   | Name                 | Description                                                                                                                                                                            |
-   | -------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-   | `GH_TOKEN`           | GitHub Personal Access Token which has the `repo` scope. Click [here](https://github.com/settings/tokens/new?scopes=repo) to create a new one.                                         |
-   | `NETLIFY_AUTH_TOKEN` | Netlify Authentication Token. Click [here](https://app.netlify.com/user/applications/personal) to create a new one.                                                                    |
+   | Name                 | Description                                                                                                                                                                                                                                                                  |
+   | -------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+   | `GH_TOKEN`           | GitHub Personal Access Token which has the `repo` scope. Click [here](https://github.com/settings/tokens/new?scopes=repo) to create a new one.                                                                                                                               |
+   | `NETLIFY_AUTH_TOKEN` | Netlify Authentication Token. Click [here](https://app.netlify.com/user/applications/personal) to create a new one.                                                                                                                                                          |
    | `NETLIFY_SITE_ID`    | Netlify site ID. You can obtain it via UI or CLI.<br/><ul><li>UI: Go to https://app.netlify.com/sites/{netlify-site-name}/settings/general#site-details and click the copy button next to the site ID.</li><li>CLI: Run `netlify sites:list` and copy the site ID.</li></ul> |
 
 ## Project Structure
@@ -144,6 +145,8 @@ All commands are run from the root of the project, from a terminal:
 | `pnpm run dev`          | Starts local dev server at `localhost:3000`        |
 | `pnpm run build`        | Build your production site to `./dist/`            |
 | `pnpm run preview`      | Preview your build locally, before deploying       |
+| `pnpm run lint`         | Check coding styles                                |
+| `pnpm run test`         | Execute test cases                                 |
 | `pnpm run astro ...`    | Run CLI commands like `astro add`, `astro preview` |
 | `pnpm run astro --help` | Get help using the Astro CLI                       |
 

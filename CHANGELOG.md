@@ -4,35 +4,71 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v1.0.7](https://github.com/ansidev/astro-basic-template/compare/v1.0.6...v1.0.7) (2023-06-07)
+
+### Code Refactoring
+
+- **npm-script:** update script lint
+
+### Documentations
+
+- **readme:** update README.md
+
+### Features
+
+- **test:** install and configure vitest
+
+### Dependencies
+
+| Package                            | Version                     |
+| ---------------------------------- | --------------------------- |
+| `astro`                            | `^2.4.2` `->` `^2.6.1`      |
+| `astro-compress`                   | `^1.1.42` `->` `^1.1.47`    |
+| `@commitlint/cli`                  | `^17.6.3` `->` `^17.6.5`    |
+| `@commitlint/config-conventional`  | `^17.6.3` `->` `^17.6.5`    |
+| `@types/node`                      | `^18.16.5` `->` `^18.16.16` |
+| `@typescript-eslint/eslint-plugin` | `^5.59.2` `->` `^5.59.9`    |
+| `@typescript-eslint/parser`        | `^5.59.2` `->` `^5.59.9`    |
+| `dotenv`                           | `^16.0.3` `->` `^16.1.4`    |
+| `eslint`                           | `^8.40.0` `->` `^8.42.0`    |
+| `eslint-plugin-astro`              | `^0.26.2` `->` `^0.27.1`    |
+| `typescript`                       | `^5.0.4` `->` `^5.1.3`      |
+
+Full Changelog: [v1.0.6...v1.0.7](https://github.com/ansidev/astro-basic-template/compare/v1.0.6...v1.0.7)
+
 ## [v1.0.6](https://github.com/ansidev/astro-basic-template/compare/v1.0.5...v1.0.6) (2023-05-08)
 
-### Bug Fixes
+### Dependencies
 
-- **deps:** update dependency astro to ^2.4.2
-
-- **deps:** update dependency astro to ^2.4.0
-
-- **deps:** update dependency astro to ^2.3.4
-
-- **deps:** update dependency astro to ^2.3.2
-
-- **deps:** update dependency astro to ^2.3.1
-
-- **deps:** update dependency astro-compress to ^1.1.42
-
-- **deps:** update dependency astro-compress to ^1.1.41
-
-- **deps:** update dependency astro-compress to ^1.1.40
+| Package                            | Version                     |
+| ---------------------------------- | --------------------------- |
+| `astro`                            | `^2.3.0` `->` `^2.4.2`      |
+| `astro-compress`                   | `^1.1.39` `->` `^1.1.42`    |
+| `@commitlint/cli`                  | `^17.6.1` `->` `^17.6.3`    |
+| `@commitlint/config-conventional`  | `^17.6.1` `->` `^17.6.3`    |
+| `@types/node`                      | `^18.15.11` `->` `^18.16.5` |
+| `@typescript-eslint/eslint-plugin` | `^5.59.0` `->` `^5.59.2`    |
+| `@typescript-eslint/parser`        | `^5.59.0` `->` `^5.59.2`    |
+| `eslint`                           | `^8.38.0` `->` `^8.40.0`    |
+| `eslint-plugin-astro`              | `^0.26.1` `->` `^0.26.2`    |
 
 Full Changelog: [v1.0.5...v1.0.6](https://github.com/ansidev/astro-basic-template/compare/v1.0.5...v1.0.6)
 
 ## [v1.0.5](https://github.com/ansidev/astro-basic-template/compare/v1.0.4...v1.0.5) (2023-04-20)
 
-### Bug Fixes
+### Dependencies
 
-- **deps:** update dependency astro-compress to ^1.1.36
-
-- **deps:** update dependency astro to ^2.3.0
+| Package                            | Version                      |
+| ---------------------------------- | ---------------------------- |
+| `astro`                            | `^2.1.7` `->` `^2.3.0`       |
+| `astro-compress`                   | `^1.1.35` `->` `^1.1.39`     |
+| `@commitlint/cli`                  | `^17.5.0` `->` `^17.6.1`     |
+| `@commitlint/config-conventional`  | `^17.4.4` `->` `^17.6.1`     |
+| `@types/node`                      | `^18.15.10` `->` `^18.15.11` |
+| `@typescript-eslint/eslint-plugin` | `^5.57.0` `->` `^5.59.0`     |
+| `@typescript-eslint/parser`        | `^5.57.0` `->` `^5.59.0`     |
+| `eslint`                           | `^8.36.0` `->` `^8.38.0`     |
+| `typescript`                       | `^5.0.2` `->` `^5.0.4`       |
 
 Full Changelog: [v1.0.4...v1.0.5](https://github.com/ansidev/astro-basic-template/compare/v1.0.4...v1.0.5)
 
