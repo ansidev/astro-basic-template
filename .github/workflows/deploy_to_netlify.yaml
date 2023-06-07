@@ -89,7 +89,10 @@ jobs:
           NETLIFY_DEPLOY_PREFIX: ${{ needs.set_deploy_environment.outputs.netlify_deploy_prefix }}
           NETLIFY_DEPLOY_ALIAS: ${{ needs.set_deploy_environment.outputs.netlify_deploy_alias }}
         run: |
-          echo "ASTRO_BASE_URL=https://${NETLIFY_DEPLOY_PREFIX}${NETLIFY_SITE_NAME}.netlify.app" >> "$GITHUB_ENV"
+          {
+            echo "ASTRO_BASE_URL=https://${NETLIFY_DEPLOY_PREFIX}${NETLIFY_SITE_NAME}.netlify.app"
+            echo "NETLIFY_DEPLOY_ALIAS=${NETLIFY_DEPLOY_ALIAS}"
+          } >> "$GITHUB_ENV"
 
       - name: Build
         uses: ghacts/static-site@main
@@ -105,6 +108,7 @@ jobs:
           auth-token: ${{ env.NETLIFY_AUTH_TOKEN }}
           site-id: ${{ env.NETLIFY_SITE_ID }}
           dir: ${{ env.DEPLOY_DIR }}
+          alias: ${{ env.NETLIFY_DEPLOY_ALIAS }}
           prod: ${{ env.PROD }}
 
     outputs:
