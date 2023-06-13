@@ -17,7 +17,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "astro": "^2.6.3",
+    "astro": "^2.6.4",
     "astro-compress": "^1.1.47",
     "astro-purgecss": "^2.0.1"
   },
