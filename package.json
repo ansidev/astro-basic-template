@@ -1,7 +1,7 @@
 {
   "name": "astro-starter-template",
   "type": "module",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "private": true,
   "license": "MIT",
   "scripts": {
@@ -17,16 +17,16 @@
     "test": "vitest"
   },
   "dependencies": {
-    "astro": "^2.6.1",
+    "astro": "^2.6.3",
     "astro-compress": "^1.1.47",
     "astro-purgecss": "^2.0.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.6.5",
     "@commitlint/config-conventional": "^17.6.5",
-    "@types/node": "^18.16.16",
-    "@typescript-eslint/eslint-plugin": "^5.59.9",
-    "@typescript-eslint/parser": "^5.59.9",
+    "@types/node": "^18.16.18",
+    "@typescript-eslint/eslint-plugin": "^5.59.11",
+    "@typescript-eslint/parser": "^5.59.11",
     "commitizen": "^4.3.0",
     "dotenv": "^16.1.4",
     "eslint": "^8.42.0",
