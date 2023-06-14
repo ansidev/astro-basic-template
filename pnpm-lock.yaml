@@ -12,8 +12,8 @@ dependencies:
     specifier: ^1.1.47
     version: 1.1.47
   astro-purgecss:
-    specifier: ^2.0.1
-    version: 2.0.1(astro@2.6.4)
+    specifier: ^2.1.0
+    version: 2.1.0(astro@2.6.4)
 
 devDependencies:
   '@commitlint/cli':
@@ -1373,8 +1373,8 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss@2.0.1(astro@2.6.4):
-    resolution: {integrity: sha512-G1DYu2wvfodPc4fTBcCOaKGuTBosyHZnXEgfKh64e4eCaHupCeaBrrIwBxFUePFZIvm1vciDWYUiPIG7qTKgOg==}
+  /astro-purgecss@2.1.0(astro@2.6.4):
+    resolution: {integrity: sha512-xBeMKIE5s0B5ifCuVrPw55OlBgfvU3jlC9zq1e4O7mlRbzaSkog+AeBpR2kiXqZ/a05zfYWJvoeOV/ymd5hFmw==}
     peerDependencies:
       astro: ^2.0.0
     dependencies:
