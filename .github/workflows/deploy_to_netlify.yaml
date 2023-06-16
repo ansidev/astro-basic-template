@@ -106,7 +106,7 @@ jobs:
           PROD: ${{ needs.set_deploy_environment.outputs.github_environment == 'production' }}
         with:
           auth-token: ${{ env.NETLIFY_AUTH_TOKEN }}
-          site-id: ${{ env.NETLIFY_SITE_ID }}
+          site: ${{ env.NETLIFY_SITE_ID }}
           dir: ${{ env.DEPLOY_DIR }}
           alias: ${{ env.NETLIFY_DEPLOY_ALIAS }}
           prod: ${{ env.PROD }}
