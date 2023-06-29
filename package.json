@@ -33,7 +33,7 @@
     "eslint-plugin-astro": "^0.27.2",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
-    "typescript": "^5.1.5",
+    "typescript": "^5.1.6",
     "vitest": "^0.32.2"
   }
 }
