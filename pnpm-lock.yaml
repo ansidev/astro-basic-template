@@ -6,14 +6,14 @@ settings:
 
 dependencies:
   astro:
-    specifier: ^2.7.2
-    version: 2.7.2(@types/node@18.16.19)
+    specifier: ^2.7.3
+    version: 2.7.3(@types/node@18.16.19)
   astro-compress:
     specifier: ^1.1.48
     version: 1.1.48
   astro-purgecss:
     specifier: ^2.2.0
-    version: 2.2.0(astro@2.7.2)
+    version: 2.2.0(astro@2.7.3)
 
 devDependencies:
   '@commitlint/cli':
@@ -73,6 +73,11 @@ packages:
 
   /@astrojs/compiler@1.5.1:
     resolution: {integrity: sha512-iIGKu/uzB8sJ5VveQf0eHrVPPFEcrvSlp4qShYMOuY2aMmK2RVXQlX9dUjtmBQ+NAokfIOb7fwCutvH+p13l+g==}
+    dev: true
+
+  /@astrojs/compiler@1.5.3:
+    resolution: {integrity: sha512-/HSFkJ+Yv+WUWSq0QVsIlhBKam5VUpGV+s8MvPguC/krHmw4Ww9TIgmfJSvV8/BN0sHJB7pCgf7yInae1zb+TQ==}
+    dev: false
 
   /@astrojs/internal-helpers@0.1.1:
     resolution: {integrity: sha512-+LySbvFbjv2nO2m/e78suleQOGEru4Cnx73VsZbrQgB2u7A4ddsQg3P2T0zC0e10jgcT+c6nNlKeLpa6nRhQIg==}
@@ -82,7 +87,7 @@ packages:
     resolution: {integrity: sha512-oEw7AwJmzjgy6HC9f5IdrphZ1GVgfV/+7xQuyf52cpTiRWd/tJISK3MsKP0cDkVlfodmNABNFnAaAWuLZEiiiA==}
     hasBin: true
     dependencies:
-      '@astrojs/compiler': 1.5.1
+      '@astrojs/compiler': 1.5.3
       '@jridgewell/trace-mapping': 0.3.17
       '@vscode/emmet-helper': 2.8.6
       events: 3.3.0
@@ -98,13 +103,13 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark@2.2.1(astro@2.7.2):
+  /@astrojs/markdown-remark@2.2.1(astro@2.7.3):
     resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
     peerDependencies:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.7.2(@types/node@18.16.19)
+      astro: 2.7.3(@types/node@18.16.19)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.0
       rehype-raw: 6.1.1
@@ -1384,17 +1389,17 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss@2.2.0(astro@2.7.2):
+  /astro-purgecss@2.2.0(astro@2.7.3):
     resolution: {integrity: sha512-FQMtQr8HCeHZOFJBltcRLceRFu8xQRk/dYyp8r6WEL4OmuNgkrqG1tJbBlkcBHeNf+gogiHYtQXuFanUOzsimA==}
     peerDependencies:
       astro: ^2.0.0
     dependencies:
-      astro: 2.7.2(@types/node@18.16.19)
+      astro: 2.7.3(@types/node@18.16.19)
       purgecss: 5.0.0
     dev: false
 
-  /astro@2.7.2(@types/node@18.16.19):
-    resolution: {integrity: sha512-2+vjXeVGU04aecs0mm93Qx9KdeVDw4OTeBIijs2Z+QLoe4RUYZnkqx5gR70VNfnoMdXoPp7+wB+ARcb0+ee/yg==}
+  /astro@2.7.3(@types/node@18.16.19):
+    resolution: {integrity: sha512-DwPvvOYElhCNyAWUlFd17HhTNBx+XXnAZfM/PYHq7RicvC/tG4loBjlYk/Yw7x9wQCkbKjoxVRiNYvmvSUmisw==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -1403,10 +1408,10 @@ packages:
       sharp:
         optional: true
     dependencies:
-      '@astrojs/compiler': 1.5.1
+      '@astrojs/compiler': 1.5.3
       '@astrojs/internal-helpers': 0.1.1
       '@astrojs/language-server': 1.0.0
-      '@astrojs/markdown-remark': 2.2.1(astro@2.7.2)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.7.3)
       '@astrojs/telemetry': 2.1.1
       '@astrojs/webapi': 2.2.0
       '@babel/core': 7.22.5
@@ -4263,7 +4268,7 @@ packages:
     resolution: {integrity: sha512-kt9wk33J7HvFGwFaHb8piwy4zbUmabC8Nu+qCw493jhe96YkpjscqGBPy4nJ9TPy9pd7+kEx1zM81rp+MIdrXg==}
     engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
     dependencies:
-      '@astrojs/compiler': 1.5.1
+      '@astrojs/compiler': 1.5.3
       prettier: 2.8.8
       sass-formatter: 0.7.5
       synckit: 0.8.4
