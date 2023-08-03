@@ -6,14 +6,14 @@ settings:
 
 dependencies:
   astro:
-    specifier: ^2.9.7
-    version: 2.9.7(@types/node@18.17.1)
+    specifier: ^2.10.0
+    version: 2.10.0(@types/node@18.17.1)
   astro-compress:
     specifier: ^1.1.50
     version: 1.1.50
   astro-purgecss:
     specifier: ^2.3.0
-    version: 2.3.0(astro@2.9.7)
+    version: 2.3.0(astro@2.10.0)
 
 devDependencies:
   '@commitlint/cli':
@@ -73,6 +73,11 @@ packages:
 
   /@astrojs/compiler@1.6.3:
     resolution: {integrity: sha512-n0xTuBznKspc0plk6RHBOlSv/EwQGyMNSxEOPj7HMeiRNnXX4woeSopN9hQsLkqraDds1eRvB4u99buWgVNJig==}
+    dev: true
+
+  /@astrojs/compiler@1.8.0:
+    resolution: {integrity: sha512-E0TI/uyO8n+IPSZ4Fvl9Lne8JKEasR6ZMGvE2G096oTWOXSsPAhRs2LomV3z+/VRepo2h+t/SdVo54wox4eJwA==}
+    dev: false
 
   /@astrojs/internal-helpers@0.1.1:
     resolution: {integrity: sha512-+LySbvFbjv2nO2m/e78suleQOGEru4Cnx73VsZbrQgB2u7A4ddsQg3P2T0zC0e10jgcT+c6nNlKeLpa6nRhQIg==}
@@ -82,7 +87,7 @@ packages:
     resolution: {integrity: sha512-oEw7AwJmzjgy6HC9f5IdrphZ1GVgfV/+7xQuyf52cpTiRWd/tJISK3MsKP0cDkVlfodmNABNFnAaAWuLZEiiiA==}
     hasBin: true
     dependencies:
-      '@astrojs/compiler': 1.6.3
+      '@astrojs/compiler': 1.8.0
       '@jridgewell/trace-mapping': 0.3.17
       '@vscode/emmet-helper': 2.8.6
       events: 3.3.0
@@ -98,13 +103,13 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark@2.2.1(astro@2.9.7):
+  /@astrojs/markdown-remark@2.2.1(astro@2.10.0):
     resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
     peerDependencies:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.9.7(@types/node@18.17.1)
+      astro: 2.10.0(@types/node@18.17.1)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.0
       rehype-raw: 6.1.1
@@ -1608,17 +1613,17 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss@2.3.0(astro@2.9.7):
+  /astro-purgecss@2.3.0(astro@2.10.0):
     resolution: {integrity: sha512-HeIhTFjNupoPP7w8rQpadAmc1Y7zrUOq2jbF6z66DwZ5+bshh/jNf5pviz6JsSQrNviiIL/mLw4EyVK69krz+w==}
     peerDependencies:
       astro: ^2.0.0
     dependencies:
-      astro: 2.9.7(@types/node@18.17.1)
+      astro: 2.10.0(@types/node@18.17.1)
       purgecss: 5.0.0
     dev: false
 
-  /astro@2.9.7(@types/node@18.17.1):
-    resolution: {integrity: sha512-gEm6SyiF2sh2qn9smPd/Z5yXhSLlsNqM5hsOo2B1ibb5S3BjxE1srmGGW7cUhM0dcxxIwixdevgamS4oxUNa/A==}
+  /astro@2.10.0(@types/node@18.17.1):
+    resolution: {integrity: sha512-0XgsWdN3tVcxzjC8amXXRc4bxzCnwiEnAaUtz73Rmb9sW9nPFtajNTWeM+9R2xIIk0PH27aVcXJWJPzQ+rtUEA==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -1627,10 +1632,10 @@ packages:
       sharp:
         optional: true
     dependencies:
-      '@astrojs/compiler': 1.6.3
+      '@astrojs/compiler': 1.8.0
       '@astrojs/internal-helpers': 0.1.1
       '@astrojs/language-server': 1.0.0
-      '@astrojs/markdown-remark': 2.2.1(astro@2.9.7)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.10.0)
       '@astrojs/telemetry': 2.1.1
       '@astrojs/webapi': 2.2.0
       '@babel/core': 7.22.5
@@ -1662,7 +1667,7 @@ packages:
       html-escaper: 3.0.3
       js-yaml: 4.1.0
       kleur: 4.1.5
-      magic-string: 0.27.0
+      magic-string: 0.30.2
       mime: 3.0.0
       network-information-types: 0.1.1(typescript@5.1.6)
       ora: 6.3.1
@@ -3619,19 +3624,19 @@ packages:
     dependencies:
       yallist: 4.0.0
 
-  /magic-string@0.27.0:
-    resolution: {integrity: sha512-8UnnX2PeRAPZuN12svgR9j7M1uWMovg/CEnIwIG0LFkXSJJe4PdfUGiTGl8V9bsBHFUtfVINcSyYxd7q+kx9fA==}
-    engines: {node: '>=12'}
-    dependencies:
-      '@jridgewell/sourcemap-codec': 1.4.15
-    dev: false
-
   /magic-string@0.30.1:
     resolution: {integrity: sha512-mbVKXPmS0z0G4XqFDCTllmDQ6coZzn94aMlb0o/A4HEHJCKcanlDZwYJgwnkmgD3jyWhUgj9VsPrfd972yPffA==}
     engines: {node: '>=12'}
     dependencies:
       '@jridgewell/sourcemap-codec': 1.4.15
     dev: true
+
+  /magic-string@0.30.2:
+    resolution: {integrity: sha512-lNZdu7pewtq/ZvWUp9Wpf/x7WzMTsR26TWV03BRZrXFsv+BI6dy8RAiKgm1uM/kyR0rCfUcqvOlXKG66KhIGug==}
+    engines: {node: '>=12'}
+    dependencies:
+      '@jridgewell/sourcemap-codec': 1.4.15
+    dev: false
 
   /make-error@1.3.6:
     resolution: {integrity: sha512-s8UhlNe7vPKomQhC1qFelMokr/Sc3AgNbso3n74mVPA5LTZwkB9NlXf4XPamLxJE8h0gh73rM94xvwRT2CVInw==}
@@ -4509,7 +4514,7 @@ packages:
     resolution: {integrity: sha512-kt9wk33J7HvFGwFaHb8piwy4zbUmabC8Nu+qCw493jhe96YkpjscqGBPy4nJ9TPy9pd7+kEx1zM81rp+MIdrXg==}
     engines: {node: ^14.15.0 || >=16.0.0, pnpm: '>=7.14.0'}
     dependencies:
-      '@astrojs/compiler': 1.6.3
+      '@astrojs/compiler': 1.8.0
       prettier: 2.8.8
       sass-formatter: 0.7.5
       synckit: 0.8.4
