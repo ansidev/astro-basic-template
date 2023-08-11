@@ -9,11 +9,11 @@ dependencies:
     specifier: ^1.1.48
     version: 1.1.48
   astro:
-    specifier: ^2.10.5
-    version: 2.10.5(@types/node@18.17.4)
+    specifier: ^2.10.7
+    version: 2.10.7(@types/node@18.17.4)
   astro-purgecss:
     specifier: ^2.3.0
-    version: 2.3.0(astro@2.10.5)
+    version: 2.3.0(astro@2.10.7)
 
 devDependencies:
   '@commitlint/cli':
@@ -103,13 +103,13 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark@2.2.1(astro@2.10.5):
+  /@astrojs/markdown-remark@2.2.1(astro@2.10.7):
     resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
     peerDependencies:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.10.5(@types/node@18.17.4)
+      astro: 2.10.7(@types/node@18.17.4)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.0
       rehype-raw: 6.1.1
@@ -1618,17 +1618,17 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss@2.3.0(astro@2.10.5):
+  /astro-purgecss@2.3.0(astro@2.10.7):
     resolution: {integrity: sha512-HeIhTFjNupoPP7w8rQpadAmc1Y7zrUOq2jbF6z66DwZ5+bshh/jNf5pviz6JsSQrNviiIL/mLw4EyVK69krz+w==}
     peerDependencies:
       astro: ^2.0.0
     dependencies:
-      astro: 2.10.5(@types/node@18.17.4)
+      astro: 2.10.7(@types/node@18.17.4)
       purgecss: 5.0.0
     dev: false
 
-  /astro@2.10.5(@types/node@18.17.4):
-    resolution: {integrity: sha512-/GlDb0iHq9smACrCqVu/AaNi5+fqJuPOVTthm5fFNi+OBRprY0DW8juaov8o+M1X6SvIyIbOcd04+ZsYrIF0Sg==}
+  /astro@2.10.7(@types/node@18.17.4):
+    resolution: {integrity: sha512-R8aF4yphrsbhxW2UxHZ1DslBn8e8vPQ23+Z/OnajNE1Q4HEZCOZ4CAbHJx2PDwq2p+CRWArNalpr3+rTqyOYBQ==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -1640,7 +1640,7 @@ packages:
       '@astrojs/compiler': 1.8.0
       '@astrojs/internal-helpers': 0.1.2
       '@astrojs/language-server': 1.0.0
-      '@astrojs/markdown-remark': 2.2.1(astro@2.10.5)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.10.7)
       '@astrojs/telemetry': 2.1.1
       '@astrojs/webapi': 2.2.0
       '@babel/core': 7.22.5
