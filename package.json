@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "@otterlord/astro-compress": "^1.1.48",
-    "astro": "^2.10.8",
+    "astro": "^2.10.9",
     "astro-purgecss": "^2.3.0"
   },
   "devDependencies": {
