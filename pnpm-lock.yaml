@@ -9,11 +9,11 @@ dependencies:
     specifier: ^1.1.48
     version: 1.1.48
   astro:
-    specifier: ^2.10.9
-    version: 2.10.9(@types/node@18.17.6)
+    specifier: ^2.10.12
+    version: 2.10.12(@types/node@18.17.6)
   astro-purgecss:
     specifier: ^2.3.0
-    version: 2.3.0(astro@2.10.9)
+    version: 2.3.0(astro@2.10.12)
 
 devDependencies:
   '@commitlint/cli':
@@ -103,13 +103,13 @@ packages:
       vscode-uri: 3.0.7
     dev: false
 
-  /@astrojs/markdown-remark@2.2.1(astro@2.10.9):
+  /@astrojs/markdown-remark@2.2.1(astro@2.10.12):
     resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
     peerDependencies:
       astro: ^2.5.0
     dependencies:
       '@astrojs/prism': 2.1.2
-      astro: 2.10.9(@types/node@18.17.6)
+      astro: 2.10.12(@types/node@18.17.6)
       github-slugger: 1.5.0
       import-meta-resolve: 2.2.0
       rehype-raw: 6.1.1
@@ -1617,17 +1617,17 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss@2.3.0(astro@2.10.9):
+  /astro-purgecss@2.3.0(astro@2.10.12):
     resolution: {integrity: sha512-HeIhTFjNupoPP7w8rQpadAmc1Y7zrUOq2jbF6z66DwZ5+bshh/jNf5pviz6JsSQrNviiIL/mLw4EyVK69krz+w==}
     peerDependencies:
       astro: ^2.0.0
     dependencies:
-      astro: 2.10.9(@types/node@18.17.6)
+      astro: 2.10.12(@types/node@18.17.6)
       purgecss: 5.0.0
     dev: false
 
-  /astro@2.10.9(@types/node@18.17.6):
-    resolution: {integrity: sha512-rtm/RHeJdAIAsziQaAGvbv2ALylNNOF1SUQ0zJaugu/ABUU62tNGNSxIR0LO5l4+dHhLbzRNo5uEnIPkmSRw+w==}
+  /astro@2.10.12(@types/node@18.17.6):
+    resolution: {integrity: sha512-JbD+hLCbXhpDofuzWQxojmjXwoqD0bR2BGqIByZ7B5Cj6dKQXHIr1HsrDdWcmjM+O4NXKV2TCfeXv1ZTtjqX3Q==}
     engines: {node: '>=16.12.0', npm: '>=6.14.0'}
     hasBin: true
     peerDependencies:
@@ -1639,7 +1639,7 @@ packages:
       '@astrojs/compiler': 1.8.0
       '@astrojs/internal-helpers': 0.1.2
       '@astrojs/language-server': 1.0.0
-      '@astrojs/markdown-remark': 2.2.1(astro@2.10.9)
+      '@astrojs/markdown-remark': 2.2.1(astro@2.10.12)
       '@astrojs/telemetry': 2.1.1
       '@astrojs/webapi': 2.2.0
       '@babel/core': 7.22.5
@@ -1668,6 +1668,7 @@ packages:
       github-slugger: 2.0.0
       gray-matter: 4.0.3
       html-escaper: 3.0.3
+      http-cache-semantics: 4.1.1
       js-yaml: 4.1.0
       kleur: 4.1.5
       magic-string: 0.30.2
@@ -3180,6 +3181,10 @@ packages:
 
   /html-void-elements@2.0.1:
     resolution: {integrity: sha512-0quDb7s97CfemeJAnW9wC0hw78MtW7NU3hqtCD75g2vFlDLt36llsYD7uB7SUzojLMP24N5IatXf7ylGXiGG9A==}
+    dev: false
+
+  /http-cache-semantics@4.1.1:
+    resolution: {integrity: sha512-er295DKPVsV82j5kw1Gjt+ADA/XYHsajl82cGNQG2eyoPkvgUhX+nDIyelzhIWbbsXP39EHcI6l5tYs2FYqYXQ==}
     dev: false
 
   /human-signals@2.1.0:
