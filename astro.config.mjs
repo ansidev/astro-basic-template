@@ -1,5 +1,5 @@
-import compress from '@otterlord/astro-compress'
 import { defineConfig } from 'astro/config'
+import compress from 'astro-compress'
 import purgecss from 'astro-purgecss'
 
 import { loadEnv } from './dotenv.config'
@@ -19,5 +19,5 @@ export default defineConfig({
   integrations: [
     purgecss(),
     compress(),
-  ]
+  ],
 })
