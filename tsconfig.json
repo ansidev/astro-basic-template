@@ -2,7 +2,9 @@
   "extends": "astro/tsconfigs/strictest",
   "compilerOptions": {
     "strict": true,
-    "importsNotUsedAsValues": "error",
+    "moduleResolution": "Node",
+    "verbatimModuleSyntax": true,
+    "ignoreDeprecations": "5.0",
     "baseUrl": ".",
     "paths": {
       "@/*": [
