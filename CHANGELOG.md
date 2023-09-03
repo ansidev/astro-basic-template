@@ -4,17 +4,49 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
-## [v1.0.9](https://github.com/ansidev/astro-basic-template/compare/v1.0.8...v1.0.9) (2023-06-13)
+## [v2.0.0](https://github.com/ansidev/astro-basic-template/compare/v1.0.9...v2.0.0) (2023-09-03)
 
 ### Bug Fixes
 
-- **deps:** update dependency astro to ^2.6.3
+- **github-workflow:** update parameter name
+- **typescript:** update TypeScript config
+- **vitest:** correct vitest config
 
-- **deps:** update dependency astro to ^2.6.2
+### Dependencies
+
+| Package                            | Version                      |
+| ---------------------------------- | ---------------------------- |
+| `astro`                            | `^2.6.3` `->` `^3.0.7`       |
+| `astro-compress`                   | `^1.1.47` `->` `^2.0.15`     |
+| `astro-purgecss`                   | `^2.0.1` `->` `^3.0.0`       |
+| `@astrojs/check`                   | `^0.2.0`                     |
+| `@commitlint/cli`                  | `^17.6.5` `->` `^17.7.1`     |
+| `@commitlint/config-conventional`  | `^17.6.5` `->` `^17.7.0`     |
+| `@types/node`                      | `^18.16.18` `->` `^18.17.14` |
+| `@typescript-eslint/eslint-plugin` | `^5.59.11` `->` `^6.5.0`     |
+| `@typescript-eslint/parser`        | `^5.59.11` `->` `^6.5.0`     |
+| `dotenv`                           | `^16.1.4` -> `^16.3.1`       |
+| `eslint`                           | `^8.42.0` -> `^8.48.0`       |
+| `eslint-plugin-astro`              | `^0.27.1` -> `^0.29.0`       |
+| `typescript`                       | `^5.1.3` -> `^5.2.2`         |
+| `vitest`                           | `^0.32.0` -> `^0.34.3`       |
+
+Full Changelog: [v1.0.9...v2.0.0](https://github.com/ansidev/astro-basic-template/compare/v1.0.9...v2.0.0)
+
+## [v1.0.9](https://github.com/ansidev/astro-basic-template/compare/v1.0.8...v1.0.9) (2023-06-13)
 
 ### Code Refactoring
 
 - **gihub-workflow:** apply GitHub Actions from ghacts/gitflow
+
+### Dependencies
+
+| Package                            | Version                      |
+| ---------------------------------- | ---------------------------- |
+| `astro`                            | `^2.6.1` `->` `^2.6.3`       |
+| `@types/node`                      | `^18.16.16` `->` `^18.16.18` |
+| `@typescript-eslint/eslint-plugin` | `^5.59.9` `->` `^5.59.11`    |
+| `@typescript-eslint/parser`        | `^5.59.9` `->` `^5.59.11`    |
 
 Full Changelog: [v1.0.8...v1.0.9](https://github.com/ansidev/astro-basic-template/compare/v1.0.8...v1.0.9)
 
