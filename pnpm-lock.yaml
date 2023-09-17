@@ -12,8 +12,8 @@ dependencies:
     specifier: ^2.0.15
     version: 2.0.15
   astro-purgecss:
-    specifier: ^3.1.0
-    version: 3.1.0(astro@3.1.0)
+    specifier: ^3.2.0
+    version: 3.2.0(astro@3.1.0)(purgecss@5.0.0)
 
 devDependencies:
   '@astrojs/check':
@@ -1752,10 +1752,11 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss@3.1.0(astro@3.1.0):
-    resolution: {integrity: sha512-MCALPcjobPcY0vLjYIilYUBKWNs73PY2oUdocZaEs/t7SS/M6vQO6Wv5CcYxneIeUoiHaBikybIJ8CUi1lqcmw==}
+  /astro-purgecss@3.2.0(astro@3.1.0)(purgecss@5.0.0):
+    resolution: {integrity: sha512-d8k/rEZY19cF7urlSeikUe5BCBRFUbBy93Vu9V6rs7dHHr2OC5QKmeHUX3so4LkwH7BSGxWg9Qnj0qrt0Rkgzg==}
     peerDependencies:
       astro: ^3.0.0
+      purgecss: ^5.0.0
     dependencies:
       astro: 3.1.0(@types/node@18.17.17)
       purgecss: 5.0.0
