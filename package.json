@@ -35,6 +35,6 @@
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "husky": "^8.0.3",
     "typescript": "^5.2.2",
-    "vitest": "^0.34.5"
+    "vitest": "^0.34.6"
   }
 }
