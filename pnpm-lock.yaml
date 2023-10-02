@@ -6,14 +6,14 @@ settings:
 
 dependencies:
   astro:
-    specifier: ^3.2.1
-    version: 3.2.1(@types/node@18.18.1)
+    specifier: ^3.2.2
+    version: 3.2.2(@types/node@18.18.1)
   astro-compress:
     specifier: ^2.0.15
     version: 2.0.15
   astro-purgecss:
     specifier: ^3.2.1
-    version: 3.2.1(astro@3.2.1)(purgecss@5.0.0)
+    version: 3.2.1(astro@3.2.2)(purgecss@5.0.0)
 
 devDependencies:
   '@astrojs/check':
@@ -136,13 +136,13 @@ packages:
       - typescript
     dev: true
 
-  /@astrojs/markdown-remark@3.2.0(astro@3.2.1):
+  /@astrojs/markdown-remark@3.2.0(astro@3.2.2):
     resolution: {integrity: sha512-jigyLfefUZPKgVmmraCkVpdUuFH1R3SrpgQO13axsgwLDBgkggaQpNR5Ag4O9PDualeBtbdt30aYSfvnBKx9Hg==}
     peerDependencies:
       astro: ^3.1.0
     dependencies:
       '@astrojs/prism': 3.0.0
-      astro: 3.2.1(@types/node@18.18.1)
+      astro: 3.2.2(@types/node@18.18.1)
       github-slugger: 2.0.0
       import-meta-resolve: 3.0.0
       mdast-util-definitions: 6.0.0
@@ -1710,24 +1710,24 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss@3.2.1(astro@3.2.1)(purgecss@5.0.0):
+  /astro-purgecss@3.2.1(astro@3.2.2)(purgecss@5.0.0):
     resolution: {integrity: sha512-dMQJxTkh1MaGRmf2GInQAYIjHKm8qRBbnSCrGoaqeHqG3vTXE+CGPUu0xiDO6kQkQfn+YMoID8sDy3wYgwP87g==}
     peerDependencies:
       astro: ^3.0.0
       purgecss: ^5.0.0
     dependencies:
-      astro: 3.2.1(@types/node@18.18.1)
+      astro: 3.2.2(@types/node@18.18.1)
       purgecss: 5.0.0
     dev: false
 
-  /astro@3.2.1(@types/node@18.18.1):
-    resolution: {integrity: sha512-idPwpMSdFg8wuS9HVkefDcbRdKpCkQzZGeKw3XO6enLcCv6ZvACRdWgl9xhM/N3RO4AOzrnJPAk1cbYcP3FdNQ==}
+  /astro@3.2.2(@types/node@18.18.1):
+    resolution: {integrity: sha512-vLOOGyD2g1HRkCQAFHmHUrVAbMI5sgUqKignBMtXNantgEq1P17sL2cvH0Yy2ibNN9DHZ/4TknXmwHAig8PJNg==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
       '@astrojs/compiler': 2.1.0
       '@astrojs/internal-helpers': 0.2.0
-      '@astrojs/markdown-remark': 3.2.0(astro@3.2.1)
+      '@astrojs/markdown-remark': 3.2.0(astro@3.2.2)
       '@astrojs/telemetry': 3.0.2
       '@babel/core': 7.22.11
       '@babel/generator': 7.22.10
