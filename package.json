@@ -22,7 +22,7 @@
     "astro-purgecss": "^3.2.1"
   },
   "devDependencies": {
-    "@astrojs/check": "^0.2.0",
+    "@astrojs/check": "^0.2.1",
     "@commitlint/cli": "^17.7.2",
     "@commitlint/config-conventional": "^17.7.0",
     "@types/node": "^18.18.4",
