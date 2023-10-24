@@ -18,7 +18,7 @@
   },
   "dependencies": {
     "astro": "^3.3.3",
-    "astro-compress": "^2.0.15",
+    "astro-compress": "^2.1.5",
     "astro-purgecss": "^3.2.1"
   },
   "devDependencies": {
