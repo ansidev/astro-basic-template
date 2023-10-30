@@ -17,8 +17,8 @@ dependencies:
 
 devDependencies:
   '@astrojs/check':
-    specifier: ^0.2.1
-    version: 0.2.1(typescript@5.2.2)
+    specifier: ^0.3.0
+    version: 0.3.0(typescript@5.2.2)
   '@commitlint/cli':
     specifier: ^18.2.0
     version: 18.2.0(typescript@5.2.2)
@@ -74,13 +74,13 @@ packages:
       '@jridgewell/trace-mapping': 0.3.17
     dev: false
 
-  /@astrojs/check@0.2.1(typescript@5.2.2):
-    resolution: {integrity: sha512-s85uBS/qjnqsKAeM0VKNWKvNaqvR06ZJupEwr2oT5/6Bti7qB5Vd8KekWIRAu2/WqOXHMFaDJz5D+qSizFnq5g==}
+  /@astrojs/check@0.3.0(typescript@5.2.2):
+    resolution: {integrity: sha512-S4R9baTTK34K5aFNCj4hn3g1nJRt3bioSG6S4fgborBn0DzU8DqvpctTCF+gUf/x/l1OolVSsYm+N7b1iXrhig==}
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
     dependencies:
-      '@astrojs/language-server': 2.4.0(typescript@5.2.2)
+      '@astrojs/language-server': 2.5.0(typescript@5.2.2)
       chokidar: 3.5.3
       fast-glob: 3.3.1
       kleur: 4.1.5
@@ -91,19 +91,19 @@ packages:
       - prettier-plugin-astro
     dev: true
 
-  /@astrojs/compiler@1.5.7:
-    resolution: {integrity: sha512-dFU7GAMbpTUGPkRoCoMQrGFlTe3qIiQMSOxIXp/nB1Do4My9uogjEmBHdR5Cwr4i6rc5/1R3Od9v8kU/pkHXGQ==}
-    dev: true
-
   /@astrojs/compiler@2.1.0:
     resolution: {integrity: sha512-Mp+qrNhly+27bL/Zq8lGeUY+YrdoU0eDfIlAeGIPrzt0PnI/jGpvPUdCaugv4zbCrDkOUScFfcbeEiYumrdJnw==}
+
+  /@astrojs/compiler@2.2.1:
+    resolution: {integrity: sha512-NJ1lWKzMkyEjE3W5NpPNAVot4/PLF5om/P6ekxNu3iLS05CaYFTcp7WpYMjdCC252b7wkNVAs45FNkVQ+RHW/g==}
+    dev: true
 
   /@astrojs/internal-helpers@0.2.1:
     resolution: {integrity: sha512-06DD2ZnItMwUnH81LBLco3tWjcZ1lGU9rLCCBaeUCGYe9cI0wKyY2W3kDyoW1I6GmcWgt1fu+D1CTvz+FIKf8A==}
     dev: false
 
-  /@astrojs/language-server@2.4.0(typescript@5.2.2):
-    resolution: {integrity: sha512-L5lbTt1zZiCYGxahGhbJ1m2THaZxBBuA3MrwvhwZ+xVy6/k13W0Xy4nVe0gUBoCizZdKEDL3puoW615waJaTBQ==}
+  /@astrojs/language-server@2.5.0(typescript@5.2.2):
+    resolution: {integrity: sha512-FGtZz6F7KTNAqGJxMgsGYcfS5TbhfOnPKM7GqOSvGYCCwMlkb9RRYcSyJfeYuI9OaGo3HEct7lQGtmH+/TpNEw==}
     hasBin: true
     peerDependencies:
       prettier: ^3.0.0
@@ -114,7 +114,7 @@ packages:
       prettier-plugin-astro:
         optional: true
     dependencies:
-      '@astrojs/compiler': 1.5.7
+      '@astrojs/compiler': 2.2.1
       '@jridgewell/sourcemap-codec': 1.4.15
       '@volar/kit': 1.10.4(typescript@5.2.2)
       '@volar/language-core': 1.10.4
@@ -1498,8 +1498,8 @@ packages:
     dependencies:
       emmet: 2.4.6
       jsonc-parser: 2.3.1
-      vscode-languageserver-textdocument: 1.0.8
-      vscode-languageserver-types: 3.17.3
+      vscode-languageserver-textdocument: 1.0.11
+      vscode-languageserver-types: 3.17.5
       vscode-uri: 2.1.2
     dev: true
 
@@ -6328,8 +6328,8 @@ packages:
     resolution: {integrity: sha512-cGOu5+lrz+2dDXSGS15y24lDtPaML1T8K/SfqgFbLmCZ1btYOxceFieR+ybTS2es/A67kRc62m2cKFLUQPWG5g==}
     dependencies:
       '@vscode/l10n': 0.0.16
-      vscode-languageserver-textdocument: 1.0.8
-      vscode-languageserver-types: 3.17.3
+      vscode-languageserver-textdocument: 1.0.11
+      vscode-languageserver-types: 3.17.5
       vscode-uri: 3.0.8
     dev: true
 
@@ -6347,14 +6347,6 @@ packages:
 
   /vscode-languageserver-textdocument@1.0.11:
     resolution: {integrity: sha512-X+8T3GoiwTVlJbicx/sIAF+yuJAqz8VvwJyoMVhwEMoEKE/fkDmrqUgDMyBECcM2A2frVZIUj5HI/ErRXCfOeA==}
-    dev: true
-
-  /vscode-languageserver-textdocument@1.0.8:
-    resolution: {integrity: sha512-1bonkGqQs5/fxGT5UchTgjGVnfysL0O8v1AYMBjqTbWQTFn721zaPGDYFkOKtfDgFiSgXM3KwaG3FMGfW4Ed9Q==}
-    dev: true
-
-  /vscode-languageserver-types@3.17.3:
-    resolution: {integrity: sha512-SYU4z1dL0PyIMd4Vj8YOqFvHu7Hz/enbWtpfnVbJHU4Nd1YNYx8u0ennumc6h48GQNeOLxmwySmnADouT/AuZA==}
     dev: true
 
   /vscode-languageserver-types@3.17.5:
