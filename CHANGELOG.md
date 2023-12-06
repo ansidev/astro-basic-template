@@ -4,6 +4,28 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](http://semver.org).
 
+## [v3.0.0](https://github.com/ansidev/astro-basic-template/compare/v2.0.0...v3.0.0) (2023-12-06)
+
+### Dependencies
+
+| Package                            | Version                    |
+| ---------------------------------- | -------------------------- |
+| `astro`                            | `^3.0.7` `->` `^4.0.0`     |
+| `astro-compress`                   | `^2.0.15` `->` `^2.2.3`    |
+| `astro-purgecss`                   | `^3.0.0` `->` `^4.0.0`     |
+| `@astrojs/check`                   | `^0.2.0` `->` `^0.3.1`     |
+| `@commitlint/cli`                  | `^17.7.1` `->` `^18.4.3`   |
+| `@commitlint/config-conventional`  | `^17.7.0` `->` `^18.4.3`   |
+| `@types/node`                      | `^18.17.14` `->` `^20.9.3` |
+| `@typescript-eslint/eslint-plugin` | `^6.5.0` `->` `^6.12.0`    |
+| `@typescript-eslint/parser`        | `^6.5.0` `->` `^6.12.0`    |
+| `eslint`                           | `^8.48.0` -> `^8.54.0`     |
+| `eslint-plugin-astro`              | `^0.29.0` -> `^0.30.0`     |
+| `typescript`                       | `^5.2.2` -> `^5.3.2`       |
+| `vitest`                           | `^0.34.0` -> `^1.0.0`      |
+
+Full Changelog: [v2.0.0...v3.0.0](https://github.com/ansidev/astro-basic-template/compare/v2.0.0...v3.0.0)
+
 ## [v2.0.0](https://github.com/ansidev/astro-basic-template/compare/v1.0.9...v2.0.0) (2023-09-03)
 
 ### Bug Fixes
