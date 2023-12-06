@@ -19,7 +19,7 @@
   "dependencies": {
     "astro": "^4.0.0",
     "astro-compress": "^2.2.3",
-    "astro-purgecss": "^3.2.1"
+    "astro-purgecss": "^4.0.0"
   },
   "devDependencies": {
     "@astrojs/check": "^0.3.1",
