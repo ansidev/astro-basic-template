@@ -17,8 +17,8 @@ dependencies:
 
 devDependencies:
   '@astrojs/check':
-    specifier: ^0.3.1
-    version: 0.3.4(typescript@5.3.3)
+    specifier: ^0.5.0
+    version: 0.5.5(typescript@5.3.3)
   '@commitlint/cli':
     specifier: ^18.4.3
     version: 18.6.1(@types/node@20.11.20)(typescript@5.3.3)
@@ -77,8 +77,8 @@ packages:
       '@jridgewell/trace-mapping': 0.3.23
     dev: false
 
-  /@astrojs/check@0.3.4(typescript@5.3.3):
-    resolution: {integrity: sha512-Wi4KwW38J3GCd/U6LH2UuU4uc4P/K1WYaqhoKm2o7rVoGhQfO+RWrSO26rUPRXYbmae8JugAgpCmsHC8bt5RlA==}
+  /@astrojs/check@0.5.5(typescript@5.3.3):
+    resolution: {integrity: sha512-05LjyUB14Cv2mkLNqY4r2igI2eu0bq/HcKCfFNIoBPLyNW7VUDr9tciD9VJXXT3s0e6JHneIs6bQW5ipjmaRcw==}
     hasBin: true
     peerDependencies:
       typescript: ^5.0.0
