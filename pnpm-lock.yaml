@@ -7,13 +7,13 @@ settings:
 dependencies:
   astro:
     specifier: ^4.0.0
-    version: 4.4.7(@types/node@20.11.22)(typescript@5.3.3)
+    version: 4.4.8(@types/node@20.11.22)(typescript@5.3.3)
   astro-compress:
     specifier: ^2.2.3
     version: 2.2.11
   astro-purgecss:
     specifier: ^4.0.0
-    version: 4.1.0(astro@4.4.7)(purgecss@5.0.0)
+    version: 4.1.0(astro@4.4.8)(purgecss@5.0.0)
 
 devDependencies:
   '@astrojs/check':
@@ -1763,18 +1763,18 @@ packages:
       - supports-color
     dev: true
 
-  /astro-purgecss@4.1.0(astro@4.4.7)(purgecss@5.0.0):
+  /astro-purgecss@4.1.0(astro@4.4.8)(purgecss@5.0.0):
     resolution: {integrity: sha512-CVxAXVuKYJZS2lbFEJJ9lKCnUx0FSd9+5muZTLdhXBWHiNpx1PKmR9WNJykP4ArCdpDPjkWSudyYUqMDAAA43w==}
     peerDependencies:
       astro: ^4.0.0
       purgecss: ^5.0.0
     dependencies:
-      astro: 4.4.7(@types/node@20.11.22)(typescript@5.3.3)
+      astro: 4.4.8(@types/node@20.11.22)(typescript@5.3.3)
       purgecss: 5.0.0
     dev: false
 
-  /astro@4.4.7(@types/node@20.11.22)(typescript@5.3.3):
-    resolution: {integrity: sha512-qzMCqCm9x4PZmZaCfVCVyTRKXNJe7FWE8BPLcLlJMmJzoPssqcVR3jtJnIBrx5uhGTLi5hsnwqVm0AMwpsId9Q==}
+  /astro@4.4.8(@types/node@20.11.22)(typescript@5.3.3):
+    resolution: {integrity: sha512-jAAfzvgHOfuZmqJjnSDownVNuWKYmsGkrFqecEppHarMA/cZ5QIboW6GQHZ8eGZQdtYRCjON3h4i64XFZfuwSg==}
     engines: {node: '>=18.14.1', npm: '>=6.14.0'}
     hasBin: true
     dependencies:
