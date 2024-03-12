@@ -10,7 +10,7 @@ dependencies:
     version: 4.4.15(@types/node@20.11.22)(typescript@5.4.2)
   astro-compress:
     specifier: ^2.2.3
-    version: 2.2.13
+    version: 2.2.14
   astro-purgecss:
     specifier: ^4.0.0
     version: 4.1.0(astro@4.4.15)(purgecss@5.0.0)
@@ -1056,8 +1056,8 @@ packages:
     engines: {node: '>=6.0.0'}
     dev: false
 
-  /@jridgewell/source-map@0.3.5:
-    resolution: {integrity: sha512-UTYAUj/wviwdsMfzoSJspJxbkH5o1snzwX0//0ENX1u/55kkZZkcTZP6u9bwKGkv+dkk9at4m1Cpt0uY80kcpQ==}
+  /@jridgewell/source-map@0.3.6:
+    resolution: {integrity: sha512-1ZJTZebgqllO79ue2bm3rIGud/bOe0pP5BjSRCRxxYkEZS8STV7zN84UBbiYu7jy+eCKSnVIUgoWWE/tt+shMQ==}
     dependencies:
       '@jridgewell/gen-mapping': 0.3.5
       '@jridgewell/trace-mapping': 0.3.25
@@ -1830,13 +1830,13 @@ packages:
     resolution: {integrity: sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==}
     dev: true
 
-  /astro-compress@2.2.13:
-    resolution: {integrity: sha512-U50h2yo9fBXAyWhlZ1pG62aUuUeB9vMa/9kScnHOE7iXfBXN8p4PgM2zbkGv2CpS0Rnsl20248JGdhWZD/hVzQ==}
+  /astro-compress@2.2.14:
+    resolution: {integrity: sha512-zQvzsDHm3/Hco/uoIs32ZCykH2OdxijeQ306oKc6yJp17CRZClVMjBBc6pdWTua7FJuWNfV7TKt+dZyvOOMbBg==}
     dependencies:
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
       csso: 5.0.5
-      files-pipe: 2.1.10
+      files-pipe: 2.1.12
       html-minifier-terser: 7.2.0
       kleur: 4.1.5
       lightningcss: 1.24.0
@@ -3037,8 +3037,8 @@ packages:
       flat-cache: 3.2.0
     dev: true
 
-  /files-pipe@2.1.10:
-    resolution: {integrity: sha512-0ZKo0hd7D4g+hdsMPv3bxvlagJ42lMsj170AMXwCS8PN3rL3GlsPBVyE2lgQsY0zUOAKtcQmEF3QV91CfHS9Yw==}
+  /files-pipe@2.1.12:
+    resolution: {integrity: sha512-5yuP6+OfZ3EsarYxp64X6TofDjxUTJQFMzVOsX7HXClNoRD4+6uJr98alzs9VJg4ISgEXPU7HlWufdKnd26JsQ==}
     dependencies:
       '@types/node': 20.11.25
       deepmerge-ts: 5.1.0
@@ -5625,7 +5625,7 @@ packages:
     engines: {node: '>=10'}
     hasBin: true
     dependencies:
-      '@jridgewell/source-map': 0.3.5
+      '@jridgewell/source-map': 0.3.6
       acorn: 8.11.3
       commander: 2.20.3
       source-map-support: 0.5.21
