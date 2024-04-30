@@ -98,6 +98,8 @@ jobs:
         uses: ghacts/static-site@main
         with:
           node-version: 18
+          package-manager: pnpm
+          package-manager-version: 9
 
       - name: Deploy
         id: deploy
