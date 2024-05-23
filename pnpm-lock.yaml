@@ -10,13 +10,13 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.9.0(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)(typescript@5.4.5)
+        version: 4.9.1(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)(typescript@5.4.5)
       astro-compress:
         specifier: ^2.2.3
         version: 2.2.23(@types/node@20.12.12)(typescript@5.4.5)
       astro-purgecss:
         specifier: ^4.0.0
-        version: 4.1.1(astro@4.9.0(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)(typescript@5.4.5))(purgecss@5.0.0)
+        version: 4.1.1(astro@4.9.1(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)(typescript@5.4.5))(purgecss@5.0.0)
     devDependencies:
       '@astrojs/check':
         specifier: ^0.7.0
@@ -1243,8 +1243,8 @@ packages:
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
-  astro@4.9.0:
-    resolution: {integrity: sha512-beb3go5Oh5QDjns7YVxG1r40Flt/cuXB+YFTnVRqbh2NuMpYRoXZqIT+ZNaorleEfrLjLFXfsn1AAKVP+XZ2KA==}
+  astro@4.9.1:
+    resolution: {integrity: sha512-9TsoAu0WBPiqyAIj9H0JW7R+tIjPjFsPKo70Nja6WL3imTTuUJQmnCre4ZVmoNV3oicTTlb+N4zjRYANW0Ty9A==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -4724,9 +4724,9 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-purgecss@4.1.1(astro@4.9.0(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)(typescript@5.4.5))(purgecss@5.0.0):
+  astro-purgecss@4.1.1(astro@4.9.1(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)(typescript@5.4.5))(purgecss@5.0.0):
     dependencies:
-      astro: 4.9.0(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)(typescript@5.4.5)
+      astro: 4.9.1(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)(typescript@5.4.5)
       purgecss: 5.0.0
 
   astro@4.8.1(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)(typescript@5.4.5):
@@ -4807,7 +4807,7 @@ snapshots:
       - terser
       - typescript
 
-  astro@4.9.0(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)(typescript@5.4.5):
+  astro@4.9.1(@types/node@20.12.12)(lightningcss@1.24.1)(terser@5.31.0)(typescript@5.4.5):
     dependencies:
       '@astrojs/compiler': 2.8.0
       '@astrojs/internal-helpers': 0.4.0
