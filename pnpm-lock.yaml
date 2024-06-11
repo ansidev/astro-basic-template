@@ -44,7 +44,7 @@ importers:
         version: 9.4.0
       eslint-plugin-astro:
         specifier: ^1.0.0
-        version: 1.2.1(eslint@9.4.0)(typescript@5.4.5)
+        version: 1.2.2(eslint@9.4.0)(typescript@5.4.5)
       eslint-plugin-simple-import-sort:
         specifier: ^12.0.0
         version: 12.1.0(eslint@9.4.0)
@@ -1643,8 +1643,8 @@ packages:
     peerDependencies:
       eslint: '>=6.0.0'
 
-  eslint-plugin-astro@1.2.1:
-    resolution: {integrity: sha512-1hhSxORsn1upZoUGfIr4ZnYzwugZ3aTNbMI4cc6rANJOhE9AGskviDZG6SAkW4pA6ttQZftMe3KJpT4+z4nNOw==}
+  eslint-plugin-astro@1.2.2:
+    resolution: {integrity: sha512-3UUWo/gwk/YhurYpFKgLJswV33kR9zhtzXk+u2g3WE5Px07wDtWSR3PoyPadHERA4g/9TCCGjsimU/TZyUKxow==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
     peerDependencies:
       eslint: '>=8.57.0'
@@ -5194,7 +5194,7 @@ snapshots:
       eslint: 9.4.0
       semver: 7.6.2
 
-  eslint-plugin-astro@1.2.1(eslint@9.4.0)(typescript@5.4.5):
+  eslint-plugin-astro@1.2.2(eslint@9.4.0)(typescript@5.4.5):
     dependencies:
       '@eslint-community/eslint-utils': 4.4.0(eslint@9.4.0)
       '@jridgewell/sourcemap-codec': 1.4.15
