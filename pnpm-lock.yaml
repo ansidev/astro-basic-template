@@ -50,7 +50,7 @@ importers:
         version: 12.1.0(eslint@9.5.0)
       globals:
         specifier: ^15.0.0
-        version: 15.5.0
+        version: 15.6.0
       husky:
         specifier: ^9.0.11
         version: 9.0.11
@@ -1858,8 +1858,8 @@ packages:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
     engines: {node: '>=18'}
 
-  globals@15.5.0:
-    resolution: {integrity: sha512-r7/9tQj5RylGxt/BKGv0D2SvehYvRFYg4ukSNk+EuZxvWI7uK/MJFmOCLq8aKvgh3EVBYFbBlOMAtaITXZr80w==}
+  globals@15.6.0:
+    resolution: {integrity: sha512-UzcJi88Hw//CurUIRa9Jxb0vgOCcuD/MNjwmXp633cyaRKkCWACkoqHCtfZv43b1kqXGg/fpOa8bwgacCeXsVg==}
     engines: {node: '>=18'}
 
   globby@11.1.0:
@@ -5186,7 +5186,7 @@ snapshots:
       astro-eslint-parser: 1.0.2(typescript@5.4.5)
       eslint: 9.5.0
       eslint-compat-utils: 0.5.1(eslint@9.5.0)
-      globals: 15.5.0
+      globals: 15.6.0
       postcss: 8.4.38
       postcss-selector-parser: 6.1.0
     transitivePeerDependencies:
@@ -5457,7 +5457,7 @@ snapshots:
 
   globals@14.0.0: {}
 
-  globals@15.5.0: {}
+  globals@15.6.0: {}
 
   globby@11.1.0:
     dependencies:
