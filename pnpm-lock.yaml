@@ -10,13 +10,13 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.13.0(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
+        version: 4.13.1(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
       astro-compress:
         specifier: ^2.2.3
         version: 2.3.1(@types/node@20.14.14)(typescript@5.5.4)
       astro-purgecss:
         specifier: ^4.0.0
-        version: 4.1.1(astro@4.13.0(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))(purgecss@5.0.0)
+        version: 4.1.1(astro@4.13.1(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))(purgecss@5.0.0)
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.0
@@ -995,8 +995,8 @@ packages:
       astro: ^4.0.0
       purgecss: ^6.0.0
 
-  astro@4.13.0:
-    resolution: {integrity: sha512-tExzJeK1rh7OdVipi1e8S6koVgjQyveSy5fNEc/4Tit4GKl/olMTUEHepZSAKR7VCyiEC/hi3rjaV3t4lxR3tA==}
+  astro@4.13.1:
+    resolution: {integrity: sha512-VnMjAc+ykFsIVjgbu9Mt/EA1fMIcPMXbU89h3ATwGOzSIKDsQH72bDgfJkWiwk6u0OE90GeP5EPhAT28Twf9oA==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1050,8 +1050,8 @@ packages:
     resolution: {integrity: sha512-yQbXgO/OSZVD2IsiLlro+7Hf6Q18EJrKSEsdoMzKePKXct3gvD8oLcOQdIzGupr5Fj+EDe8gO/lxc1BzfMpxvA==}
     engines: {node: '>=8'}
 
-  browserslist@4.23.2:
-    resolution: {integrity: sha512-qkqSyistMYdxAcw+CzbZwlBy8AGmS/eEWs+sEV5TnLRGDOL+C5M2EnH6tlZyg0YoAxGJAFKh61En9BR941GnHA==}
+  browserslist@4.23.3:
+    resolution: {integrity: sha512-btwCFJVjI4YWDNfau8RhZ+B1Q/VLoUITrm3RlP6y1tYGWIOa+InuYiRGXUBXo8nA1qKmHMyLB/iVQg5TT4eFoA==}
     engines: {node: ^6 || ^7 || ^8 || ^9 || ^10 || ^11 || ^12 || >=13.7}
     hasBin: true
 
@@ -3323,7 +3323,7 @@ snapshots:
     dependencies:
       '@babel/compat-data': 7.25.2
       '@babel/helper-validator-option': 7.24.8
-      browserslist: 4.23.2
+      browserslist: 4.23.3
       lru-cache: 5.1.1
       semver: 6.3.1
 
@@ -4212,7 +4212,7 @@ snapshots:
       '@playform/pipe': 0.1.0
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 4.13.0(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
+      astro: 4.13.1(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
       csso: 5.0.5
       deepmerge-ts: 7.1.0
       html-minifier-terser: 7.2.0
@@ -4249,12 +4249,12 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-purgecss@4.1.1(astro@4.13.0(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))(purgecss@5.0.0):
+  astro-purgecss@4.1.1(astro@4.13.1(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))(purgecss@5.0.0):
     dependencies:
-      astro: 4.13.0(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
+      astro: 4.13.1(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
       purgecss: 5.0.0
 
-  astro@4.13.0(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4):
+  astro@4.13.1(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4):
     dependencies:
       '@astrojs/compiler': 2.10.1
       '@astrojs/internal-helpers': 0.4.1
@@ -4272,7 +4272,6 @@ snapshots:
       aria-query: 5.3.0
       axobject-query: 4.1.0
       boxen: 7.1.1
-      chokidar: 3.6.0
       ci-info: 4.0.0
       clsx: 2.1.1
       common-ancestor-path: 1.0.1
@@ -4382,12 +4381,12 @@ snapshots:
     dependencies:
       fill-range: 7.1.1
 
-  browserslist@4.23.2:
+  browserslist@4.23.3:
     dependencies:
       caniuse-lite: 1.0.30001646
       electron-to-chromium: 1.5.4
       node-releases: 2.0.18
-      update-browserslist-db: 1.1.0(browserslist@4.23.2)
+      update-browserslist-db: 1.1.0(browserslist@4.23.3)
 
   buffer-from@1.1.2: {}
 
@@ -6540,9 +6539,9 @@ snapshots:
 
   universalify@2.0.1: {}
 
-  update-browserslist-db@1.1.0(browserslist@4.23.2):
+  update-browserslist-db@1.1.0(browserslist@4.23.3):
     dependencies:
-      browserslist: 4.23.2
+      browserslist: 4.23.3
       escalade: 3.1.2
       picocolors: 1.0.1
 
