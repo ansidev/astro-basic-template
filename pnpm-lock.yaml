@@ -10,13 +10,13 @@ importers:
     dependencies:
       astro:
         specifier: ^4.0.0
-        version: 4.13.2(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
+        version: 4.13.3(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
       astro-compress:
         specifier: ^2.2.3
         version: 2.3.1(@types/node@20.14.14)(typescript@5.5.4)
       astro-purgecss:
         specifier: ^4.0.0
-        version: 4.3.0(astro@4.13.2(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))(purgecss@5.0.0)
+        version: 4.3.0(astro@4.13.3(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))(purgecss@5.0.0)
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.0
@@ -1055,8 +1055,8 @@ packages:
       astro: ^4.0.0
       purgecss: ^6.0.0
 
-  astro@4.13.2:
-    resolution: {integrity: sha512-bdfUV6zfOWOV/IbROqVx+1cuAFXY0PZpVxr4JO9YxCKa5AfQRR8RKXJ2k8QUjalA6dmxQ9FgAQw3FRrzHVOGEQ==}
+  astro@4.13.3:
+    resolution: {integrity: sha512-MyhmM0v5sphiVwxAm5jjKxWeuPZijWPJ8Ajdign9QzEmLWSH8vUYIJWx/dWRQ6vF1I0jXrksoj3wtw5nzXt9nw==}
     engines: {node: ^18.17.1 || ^20.3.0 || >=21.0.0, npm: '>=9.6.5', pnpm: '>=7.1.0'}
     hasBin: true
 
@@ -1461,8 +1461,8 @@ packages:
   eastasianwidth@0.2.0:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
 
-  electron-to-chromium@1.5.5:
-    resolution: {integrity: sha512-QR7/A7ZkMS8tZuoftC/jfqNkZLQO779SSW3YuZHP4eXpj3EffGLFcB/Xu9AAZQzLccTiCV+EmUo3ha4mQ9wnlA==}
+  electron-to-chromium@1.5.6:
+    resolution: {integrity: sha512-jwXWsM5RPf6j9dPYzaorcBSUg6AiqocPEyMpkchkvntaH9HGfOOMZwxMJjDY/XEs3T5dM7uyH1VhRMkqUU9qVw==}
 
   emmet@2.4.7:
     resolution: {integrity: sha512-O5O5QNqtdlnQM2bmKHtJgyChcrFMgQuulI+WdiOw2NArzprUqqxUW6bgYtKvzKgrsYpuLWalOkdhNP+1jluhCA==}
@@ -4301,7 +4301,7 @@ snapshots:
       '@playform/pipe': 0.1.0
       '@types/csso': 5.0.4
       '@types/html-minifier-terser': 7.0.2
-      astro: 4.13.2(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
+      astro: 4.13.3(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
       csso: 5.0.5
       deepmerge-ts: 7.1.0
       html-minifier-terser: 7.2.0
@@ -4339,12 +4339,12 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-purgecss@4.3.0(astro@4.13.2(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))(purgecss@5.0.0):
+  astro-purgecss@4.3.0(astro@4.13.3(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4))(purgecss@5.0.0):
     dependencies:
-      astro: 4.13.2(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
+      astro: 4.13.3(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4)
       purgecss: 5.0.0
 
-  astro@4.13.2(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4):
+  astro@4.13.3(@types/node@20.14.14)(lightningcss@1.25.1)(terser@5.31.3)(typescript@5.5.4):
     dependencies:
       '@astrojs/compiler': 2.10.2
       '@astrojs/internal-helpers': 0.4.1
@@ -4475,7 +4475,7 @@ snapshots:
   browserslist@4.23.3:
     dependencies:
       caniuse-lite: 1.0.30001651
-      electron-to-chromium: 1.5.5
+      electron-to-chromium: 1.5.6
       node-releases: 2.0.18
       update-browserslist-db: 1.1.0(browserslist@4.23.3)
 
@@ -4807,7 +4807,7 @@ snapshots:
 
   eastasianwidth@0.2.0: {}
 
-  electron-to-chromium@1.5.5: {}
+  electron-to-chromium@1.5.6: {}
 
   emmet@2.4.7:
     dependencies:
