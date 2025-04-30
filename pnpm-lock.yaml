@@ -13,7 +13,7 @@ importers:
         version: 5.7.9(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.5.1)
       astro-compress:
         specifier: ^2.2.3
-        version: 2.3.7(@types/node@22.13.10)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.5.1)
+        version: 2.3.8(@types/node@22.13.10)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.5.1)
       astro-purgecss:
         specifier: ^5.0.0
         version: 5.2.2(astro@5.7.9(@types/node@22.13.10)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.40.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.5.1))(purgecss@5.0.0)
@@ -1061,8 +1061,8 @@ packages:
     resolution: {integrity: sha512-Izi8RQcffqCeNVgFigKli1ssklIbpHnCYc6AknXGYoB6grJqyeby7jv12JUQgmTAnIDnbck1uxksT4dzN3PWBA==}
     engines: {node: '>=12'}
 
-  astro-compress@2.3.7:
-    resolution: {integrity: sha512-VbMhIXqKI+zgq/oyEzT4epLKJj2YqdhcNgugqlmeQwvqsrlIxjqfPbNO7DqgKP74HRMRm0sBEM0COMRqnzUPFA==}
+  astro-compress@2.3.8:
+    resolution: {integrity: sha512-XajjEtSTJuVRBOrtZ/Siavd4KcH47SEHo0XoZZeYVRF6BODSBqxVdtlfkqYJKM+F4XRUmLDS5ncVTILnQYvvXw==}
 
   astro-eslint-parser@1.0.3:
     resolution: {integrity: sha512-AGsGgcg7Jg9UpyCDgvl/EkdYpe1oMkFdmC2Zl+KWneoieLCtQIFjmcY8yt41gcNx4mby0w8BBJQcBmPuf8UAoQ==}
@@ -1426,10 +1426,6 @@ packages:
 
   detect-indent@6.1.0:
     resolution: {integrity: sha512-reYkTUJAZb9gUuZ2RvVCNhVHdg62RHnJ7WJl8ftMi4diZ6NWlciOzQN88pUhSELEwflJht4oQDv0F0BMlwaYtA==}
-    engines: {node: '>=8'}
-
-  detect-libc@2.0.3:
-    resolution: {integrity: sha512-bwy0MGW55bG41VqxxypOsdSdGqLwXPI/focwgTYCFMbdUiBAxLg9CFzG08sz2aqzknwiX7Hkl0bQENjg8iLByw==}
     engines: {node: '>=8'}
 
   detect-libc@2.0.4:
@@ -4363,7 +4359,7 @@ snapshots:
 
   assertion-error@2.0.1: {}
 
-  astro-compress@2.3.7(@types/node@22.13.10)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.5.1):
+  astro-compress@2.3.8(@types/node@22.13.10)(jiti@2.4.2)(rollup@4.40.1)(typescript@5.8.3)(yaml@2.5.1):
     dependencies:
       '@playform/pipe': 0.1.3
       '@types/csso': 5.0.4
@@ -4870,8 +4866,6 @@ snapshots:
   detect-file@1.0.0: {}
 
   detect-indent@6.1.0: {}
-
-  detect-libc@2.0.3: {}
 
   detect-libc@2.0.4: {}
 
@@ -5556,7 +5550,7 @@ snapshots:
 
   lightningcss@1.29.3:
     dependencies:
-      detect-libc: 2.0.3
+      detect-libc: 2.0.4
     optionalDependencies:
       lightningcss-darwin-arm64: 1.29.3
       lightningcss-darwin-x64: 1.29.3
