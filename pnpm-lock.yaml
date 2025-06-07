@@ -16,7 +16,7 @@ importers:
         version: 2.3.8(@types/node@22.15.30)(jiti@2.4.2)(rollup@4.41.1)(typescript@5.8.3)(yaml@2.5.1)
       astro-purgecss:
         specifier: ^5.0.0
-        version: 5.2.2(astro@5.9.0(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.41.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.5.1))(purgecss@5.0.0)
+        version: 5.2.3(astro@5.9.0(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.41.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.5.1))(purgecss@5.0.0)
     devDependencies:
       '@astrojs/check':
         specifier: ^0.9.0
@@ -1013,8 +1013,8 @@ packages:
     resolution: {integrity: sha512-AGsGgcg7Jg9UpyCDgvl/EkdYpe1oMkFdmC2Zl+KWneoieLCtQIFjmcY8yt41gcNx4mby0w8BBJQcBmPuf8UAoQ==}
     engines: {node: ^18.18.0 || ^20.9.0 || >=21.1.0}
 
-  astro-purgecss@5.2.2:
-    resolution: {integrity: sha512-lL4JqBlIyRTj6CQPJrGRWJYX6OzyGBEGjLwxmgSHALn0xKsU0zf9X4Lnd+L+SM0wa+o7UbD9wXMhmK42sjXl8g==}
+  astro-purgecss@5.2.3:
+    resolution: {integrity: sha512-JrGQs37gQRn86X6rUJBg4ujqR++5J6uXFK0HF+W2Yaja+ZvGtIHFdw6JsgoAnzn+XtKB/hsiPzSIqO5FZfU0jQ==}
     peerDependencies:
       astro: ^5.0.0
       purgecss: ^7.0.0
@@ -4357,7 +4357,7 @@ snapshots:
       - supports-color
       - typescript
 
-  astro-purgecss@5.2.2(astro@5.9.0(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.41.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.5.1))(purgecss@5.0.0):
+  astro-purgecss@5.2.3(astro@5.9.0(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.41.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.5.1))(purgecss@5.0.0):
     dependencies:
       astro: 5.9.0(@types/node@22.15.30)(jiti@2.4.2)(lightningcss@1.29.3)(rollup@4.41.1)(terser@5.39.0)(typescript@5.8.3)(yaml@2.5.1)
       purgecss: 5.0.0
