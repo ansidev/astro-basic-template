@@ -38,7 +38,7 @@ importers:
         version: 4.3.1(@types/node@22.16.5)(typescript@5.8.3)
       dotenv:
         specifier: ^17.0.0
-        version: 17.2.0
+        version: 17.2.1
       eslint:
         specifier: ^9.0.0
         version: 9.31.0(jiti@2.4.2)
@@ -1430,8 +1430,8 @@ packages:
     resolution: {integrity: sha512-QM8q3zDe58hqUqjraQOmzZ1LIH9SWQJTlEKCH4kJ2oQvLZk7RbQXvtDM2XEq3fwkV9CCvvH4LA0AV+ogFsBM2Q==}
     engines: {node: '>=8'}
 
-  dotenv@17.2.0:
-    resolution: {integrity: sha512-Q4sgBT60gzd0BB0lSyYD3xM4YxrXA9y4uBDof1JNYGzOXrQdQ6yX+7XIAqoFOGQFOTK1D3Hts5OllpxMDZFONQ==}
+  dotenv@17.2.1:
+    resolution: {integrity: sha512-kQhDYKZecqnM0fCnzI5eIv5L4cAe/iRI+HqMbO/hbRdTAeXDG+M9FjipUxNfbARuEg4iHIbhnhs78BCHNbSxEQ==}
     engines: {node: '>=12'}
 
   dset@3.1.4:
@@ -4866,7 +4866,7 @@ snapshots:
     dependencies:
       is-obj: 2.0.0
 
-  dotenv@17.2.0: {}
+  dotenv@17.2.1: {}
 
   dset@3.1.4: {}
 
